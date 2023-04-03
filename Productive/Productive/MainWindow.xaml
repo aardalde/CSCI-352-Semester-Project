@@ -5,17 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Productive"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Button Content="Button" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Height="81" RenderTransformOrigin="0.5,0.5" Width="552" Click="Button_Click">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleX="-1"/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
+        Title="MainWindow" Height="650" Width="1000" Background="#FF444444">
+    <Grid HorizontalAlignment="Center" Width="404" Margin="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="49*"/>
+            <RowDefinition Height="365*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Height="29" TextWrapping="Wrap" Text="Productive" FontFamily="Harlow Solid Italic" Foreground="#FFFEC63D" FontSize="24" FontWeight="Bold" Margin="0,20,0,0" TextAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Center" Width="988"/>
+        <TextBlock HorizontalAlignment="Left" Margin="621,125,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Nexr " VerticalAlignment="Top"/>
+        <Grid Height="641" Margin="-292,-7,-292,0" Grid.RowSpan="2" VerticalAlignment="Top">
+            <Line X1="0" Y1="60" X2="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Window}}" Y2="60" Stroke="#FFFEC63D" StrokeThickness="3"/>
+            <Line X1="298" Y1="60" X2="298" Y2="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Window}}" Stroke="#FFFEC63D" StrokeThickness="3"/>
+            <Line X1="699" Y1="60" X2="699" Y2="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Window}}" Stroke="#FFFEC63D" StrokeThickness="3"/>
+            <TextBlock HorizontalAlignment="Left" Height="59" Margin="698,62,0,0" TextWrapping="Wrap" Text="Next Event" VerticalAlignment="Top" Width="298" IsEnabled="False" Foreground="White" TextAlignment="Center" FontSize="24" FontFamily="Segoe UI Semibold"/>
+            <TextBlock Height="214" Margin="702,121,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Background="DarkGray" FontSize="24" FontWeight="Bold" TextAlignment="Center" Foreground="#FFFBFAFA"/>
+            <TextBlock HorizontalAlignment="Left" Height="59" Margin="702,335,0,0" TextWrapping="Wrap" Text="Events Completed This Month (MONTH):" VerticalAlignment="Top" Width="291" IsEnabled="False" Foreground="White" TextAlignment="Center" FontSize="14" FontFamily="Segoe UI Semibold" FontWeight="Bold"/>
+            <TextBlock Height="60" Margin="702,394,0,0" TextWrapping="Wrap" Text="Tasks Completed on Time:" VerticalAlignment="Top" Width="298" IsEnabled="False" Foreground="White" TextAlignment="Center" FontSize="14" FontFamily="Segoe UI Semibold" HorizontalAlignment="Left" FontWeight="Bold"/>
+            <TextBlock HorizontalAlignment="Left" Margin="702,454,0,0" TextWrapping="Wrap" Text="Productivity Ratio: __%" VerticalAlignment="Top" Height="165" Width="276" FontSize="14" Foreground="White" FontWeight="Bold" TextAlignment="Center"/>
+        </Grid>
+        <TextBlock HorizontalAlignment="Left" Height="59" Margin="-292,10,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Calendar" VerticalAlignment="Top" Width="298" IsEnabled="False" Foreground="White" TextAlignment="Center" FontSize="24" FontFamily="Segoe UI Semibold"/>
+        <TextBox HorizontalAlignment="Left" Height="64" Margin="-292,80,0,0" TextWrapping="Wrap" Text="Events" VerticalAlignment="Top" Width="295" TextChanged="TextBox_TextChanged" Foreground="White" TextAlignment="Center" FontSize="16" Grid.Row="1" Background="DarkGray" FontWeight="Bold"/>
+        <TextBox HorizontalAlignment="Left" Height="64" Margin="-292,146,0,0" TextWrapping="Wrap" Text="Import" VerticalAlignment="Top" Width="295" TextChanged="TextBox_TextChanged" Foreground="White" TextAlignment="Center" FontSize="16" Grid.Row="1" Background="DarkGray" FontWeight="Bold"/>
+        <TextBox HorizontalAlignment="Left" Height="64" Margin="-292,211,0,0" TextWrapping="Wrap" Text="Export" VerticalAlignment="Top" Width="295" TextChanged="TextBox_TextChanged" Foreground="White" TextAlignment="Center" FontSize="16" Grid.Row="1" Background="DarkGray" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Height="59" Margin="-295,282,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Notes" VerticalAlignment="Top" Width="298" IsEnabled="False" Foreground="White" TextAlignment="Center" FontSize="24" FontFamily="Segoe UI Semibold"/>
+
+
     </Grid>
 </Window>
