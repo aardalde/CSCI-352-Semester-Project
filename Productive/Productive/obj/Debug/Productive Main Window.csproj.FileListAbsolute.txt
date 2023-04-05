@@ -32,3 +32,23 @@ C:\Users\alden\Source\Repos\aardalde\CSCI-352-Semester-Project\Productive\Produc
 C:\Users\alden\Source\Repos\aardalde\CSCI-352-Semester-Project\Productive\Productive\obj\Debug\Productive Main Window.csproj.CoreCompileInputs.cache
 C:\Users\alden\Source\Repos\aardalde\CSCI-352-Semester-Project\Productive\Productive\obj\Debug\Productive.exe
 C:\Users\alden\Source\Repos\aardalde\CSCI-352-Semester-Project\Productive\Productive\obj\Debug\Productive.pdb
+C:\Users\aardalde\Source\Repos\aardalde\CSCI-352-Semester-Project\Productive\Productive\bin\Debug\Productive.exe.config
+C:\Users\aardalde\Source\Repos\aardalde\CSCI-352-Semester-Project\Productive\Productive\bin\Debug\Productive.exe
+C:\Users\aardalde\Source\Repos\aardalde\CSCI-352-Semester-Project\Productive\Productive\bin\Debug\Productive.pdb
+C:\Users\aardalde\Source\Repos\aardalde\CSCI-352-Semester-Project\Productive\Productive\obj\Debug\Productive Main Window.csproj.AssemblyReference.cache
+C:\Users\aardalde\Source\Repos\aardalde\CSCI-352-Semester-Project\Productive\Productive\obj\Debug\Productive Main Window.csproj.SuggestedBindingRedirects.cache
+C:\Users\aardalde\Source\Repos\aardalde\CSCI-352-Semester-Project\Productive\Productive\obj\Debug\Templates.baml
+C:\Users\aardalde\Source\Repos\aardalde\CSCI-352-Semester-Project\Productive\Productive\obj\Debug\EventsSubWindow.g.cs
+C:\Users\aardalde\Source\Repos\aardalde\CSCI-352-Semester-Project\Productive\Productive\obj\Debug\MainWindow.g.cs
+C:\Users\aardalde\Source\Repos\aardalde\CSCI-352-Semester-Project\Productive\Productive\obj\Debug\App.g.cs
+C:\Users\aardalde\Source\Repos\aardalde\CSCI-352-Semester-Project\Productive\Productive\obj\Debug\Productive_MarkupCompile.cache
+C:\Users\aardalde\Source\Repos\aardalde\CSCI-352-Semester-Project\Productive\Productive\obj\Debug\Productive_MarkupCompile.lref
+C:\Users\aardalde\Source\Repos\aardalde\CSCI-352-Semester-Project\Productive\Productive\obj\Debug\App.baml
+C:\Users\aardalde\Source\Repos\aardalde\CSCI-352-Semester-Project\Productive\Productive\obj\Debug\EventsSubWindow.baml
+C:\Users\aardalde\Source\Repos\aardalde\CSCI-352-Semester-Project\Productive\Productive\obj\Debug\MainWindow.baml
+C:\Users\aardalde\Source\Repos\aardalde\CSCI-352-Semester-Project\Productive\Productive\obj\Debug\Productive.g.resources
+C:\Users\aardalde\Source\Repos\aardalde\CSCI-352-Semester-Project\Productive\Productive\obj\Debug\Productive.Properties.Resources.resources
+C:\Users\aardalde\Source\Repos\aardalde\CSCI-352-Semester-Project\Productive\Productive\obj\Debug\Productive Main Window.csproj.GenerateResource.cache
+C:\Users\aardalde\Source\Repos\aardalde\CSCI-352-Semester-Project\Productive\Productive\obj\Debug\Productive Main Window.csproj.CoreCompileInputs.cache
+C:\Users\aardalde\Source\Repos\aardalde\CSCI-352-Semester-Project\Productive\Productive\obj\Debug\Productive.exe
+C:\Users\aardalde\Source\Repos\aardalde\CSCI-352-Semester-Project\Productive\Productive\obj\Debug\Productive.pdb

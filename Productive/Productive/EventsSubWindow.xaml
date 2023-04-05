@@ -5,8 +5,112 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Productive"
         mc:Ignorable="d"
-        Title="EventsSubWindow" Height="450" Width="800">
-    <Grid>
+        Title="EventsSubWindow" 
+        Height="700" 
+        Width="900"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen">
+    
+    <!--// Background Grid //-->
+    
+    <Grid Background="#23262B">
+
+        <TextBlock Text="D E S I G N   T H E   I N T E R F A C E"
+                   Foreground="#525965"
+                   FontFamily="Fonts/#Orbitron Medium"
+                   FontSize="10"
+                   VerticalAlignment="Bottom"
+                   HorizontalAlignment="Right"
+                   Margin="0,0,15,10" />
+
+        <Border Background="#D61734"
+                Height="15"
+                CornerRadius="3,0,0,3"
+                Width="5"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Right"
+                Margin="0,0,0,8" />
+
+        <!--// Menu Panel //-->
+
+        <StackPanel Background="#2E333A"
+                    Width="230"
+                    Orientation="Vertical"
+                    HorizontalAlignment="Left">
+
+            <!--// Channel Name //-->
+
+            <Grid Height="50"
+                  VerticalAlignment="Top"
+                  Margin="0,30,0,0">
+
+                <Border Background="#D61734"
+                          Height="25"
+                          CornerRadius="3,0,0,3"
+                          Width="6"
+                          VerticalAlignment="Center"
+                          HorizontalAlignment="Right" />
+
+                <TextBlock Text="C #   D E S I G N   P R O"
+                           Foreground="#FFFFFF"
+                           FontFamily="Fonts/#Orbitron Medium"
+                           FontSize="15"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center" />
+
+            </Grid>
+                
+            <!--// Main Menu //-->
+
         
+
+        <Menu Height="450"
+              Background="Transparent"
+              Margin="0,40,0,0">
+
+            <Menu.ItemsPanel>
+
+                <ItemsPanelTemplate>
+
+                    <VirtualizingStackPanel Orientation="Vertical" />
+
+                </ItemsPanelTemplate>
+                
+            </Menu.ItemsPanel>
+
+            <!--// Main Menu - Home //-->
+
+            <MenuItem Header="Home"
+                      Template="{StaticResource Menu_Template}">
+
+                <MenuItem.Icon>
+
+                    <Image Source="Assets/img_home.png"
+                           Stretch="None" />
+                    
+                </MenuItem.Icon>
+
+            </MenuItem>
+
+            <!--// Main Menu - Music //-->
+
+            <MenuItem Header="Music"
+                      Template="{StaticResource Menu_SubMenu_Template}">
+
+                <MenuItem.Icon>
+
+                    <Image Source="Assets/img_music.png"
+                           Stretch="None" />
+
+                </MenuItem.Icon>
+
+            </MenuItem>
+
+        </Menu>
+
+        </StackPanel>
+
     </Grid>
+    
 </Window>
