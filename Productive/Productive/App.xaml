@@ -1,4 +1,4 @@
-﻿<Application x:Class="Productive.App"
+﻿    <Application x:Class="Productive.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:Productive"
@@ -12,6 +12,9 @@
                         <Style.Triggers>
                             <Trigger Property="IsToday" Value="True">
                                 <Setter Property="Background" Value="#FFFEC63D"/>
+                            </Trigger>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Background" Value="#FFFEC63D" />
                             </Trigger>
                         </Style.Triggers>
                     </Style>

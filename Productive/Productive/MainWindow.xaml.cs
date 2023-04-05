@@ -23,19 +23,24 @@ namespace Productive
         public MainWindow()
         {
             InitializeComponent();
+            double totalTasks = 5;
+            double tasksOnTime = 3; //TODO: CHANGE IMPLEMENTAION
+            EventsCompletedBlock.Text = "Events Completed this Month (" + DateTime.Now.ToString("MMMM") + "):";
+            TasksCompletedBlock.Text = "Tasks Completed on Time: " + tasksOnTime;
+            ProdRatioBlock.Text = "Productivity Ratio: " + ((tasksOnTime / totalTasks) * 100) + "%";
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void EventsButton_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void ImportButton_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void ExportButton_Click(object sender, RoutedEventArgs e)
         {
 
         }
