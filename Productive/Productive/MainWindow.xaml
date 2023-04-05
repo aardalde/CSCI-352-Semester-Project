@@ -34,7 +34,6 @@
             <Button Content="Import" HorizontalAlignment="Left" Height="64" Margin="0,165,0,0" VerticalAlignment="Top" Width="296" FontSize="16" FontWeight="Bold" Foreground="White" Background="DarkGray"/>
             <Button Content="Export" HorizontalAlignment="Left" Height="64" Margin="0,230,0,0" VerticalAlignment="Top" Width="296" FontSize="16" Foreground="White" FontWeight="Bold" Background="DarkGray"/>
             <ScrollViewer HorizontalAlignment="Left" Height="277" Margin="-2,342,0,0" VerticalAlignment="Top" Width="298" Cursor="ScrollSW"/>
-            <Calendar Margin="298,100,298,22" Width="402"/>
         </Grid>
     </Grid>
 </Window>

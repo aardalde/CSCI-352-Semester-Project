@@ -30,3 +30,4 @@ C:\Users\karpa\Source\Repos\CSCI-352-Semester-Project\Productive\Productive\obj\
 C:\Users\karpa\Source\Repos\CSCI-352-Semester-Project\Productive\Productive\obj\Debug\Productive Main Window.csproj.CoreCompileInputs.cache
 C:\Users\karpa\Source\Repos\CSCI-352-Semester-Project\Productive\Productive\obj\Debug\Productive.exe
 C:\Users\karpa\Source\Repos\CSCI-352-Semester-Project\Productive\Productive\obj\Debug\Productive.pdb
+C:\Users\karpa\Source\Repos\CSCI-352-Semester-Project\Productive\Productive\obj\Debug\App.baml

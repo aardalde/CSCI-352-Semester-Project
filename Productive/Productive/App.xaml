@@ -4,6 +4,33 @@
              xmlns:local="clr-namespace:Productive"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style x:Key="CustomCalendarDayButtonStyle" TargetType="CalendarDayButton">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="CalendarDayButton">
+                        <Grid>
+                            <Border Name="DayButtonBorder" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="5" Padding="5">
+                                <StackPanel>
+                                    <TextBlock Text="{Binding}" HorizontalAlignment="Center" />
+                                    <TextBox Text="{Binding Notes}" Margin="0,10,0,0" />
+                                </StackPanel>
+                            </Border>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="DayButtonBorder" Property="Background" Value="#FFDDEEFF" />
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="DayButtonBorder" Property="Background" Value="#FFBBCCDD" />
+                            </Trigger>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter TargetName="DayButtonBorder" Property="Background" Value="#FFAACCEE" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
     </Application.Resources>
 </Application>
