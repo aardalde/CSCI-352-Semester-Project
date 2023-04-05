@@ -4,33 +4,19 @@
              xmlns:local="clr-namespace:Productive"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <Style x:Key="CustomCalendarDayButtonStyle" TargetType="CalendarDayButton">
-            <Setter Property="Template">
+        <Style x:Key="CustomCalendarStyle" TargetType="{x:Type Calendar}">
+            <Setter Property="Background" Value="#A9A9A9"/>
+            <Setter Property="CalendarDayButtonStyle">
                 <Setter.Value>
-                    <ControlTemplate TargetType="CalendarDayButton">
-                        <Grid>
-                            <Border Name="DayButtonBorder" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="5" Padding="5">
-                                <StackPanel>
-                                    <TextBlock Text="{Binding}" HorizontalAlignment="Center" />
-                                    <TextBox Text="{Binding Notes}" Margin="0,10,0,0" />
-                                </StackPanel>
-                            </Border>
-                        </Grid>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter TargetName="DayButtonBorder" Property="Background" Value="#FFDDEEFF" />
+                    <Style TargetType="{x:Type CalendarDayButton}">
+                        <Style.Triggers>
+                            <Trigger Property="IsToday" Value="True">
+                                <Setter Property="Background" Value="#FFFEC63D"/>
                             </Trigger>
-                            <Trigger Property="IsPressed" Value="True">
-                                <Setter TargetName="DayButtonBorder" Property="Background" Value="#FFBBCCDD" />
-                            </Trigger>
-                            <Trigger Property="IsSelected" Value="True">
-                                <Setter TargetName="DayButtonBorder" Property="Background" Value="#FFAACCEE" />
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
+                        </Style.Triggers>
+                    </Style>
                 </Setter.Value>
             </Setter>
         </Style>
-
     </Application.Resources>
 </Application>

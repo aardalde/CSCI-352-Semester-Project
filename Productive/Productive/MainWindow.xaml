@@ -5,36 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Productive"
         mc:Ignorable="d"
-        Title="MainWindow" Height="628" Width="1000" Background="#FF444444">
+        Title="MainWindow" Height="628" Width="1376" Background="#FF444444">
     <Grid HorizontalAlignment="Center" Width="414">
         <Grid.RowDefinitions>
             <RowDefinition Height="49*"/>
             <RowDefinition Height="365*"/>
         </Grid.RowDefinitions>
         <TextBlock Height="44" TextWrapping="Wrap" Text="Productive" FontFamily="Sitka Small Semibold" Foreground="#FFFEC63D" FontSize="24" FontWeight="Bold" Margin="0,10,0,0" TextAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Center" Width="394"/>
-        <Grid Height="641" Margin="-292,-7,-292,0" Grid.RowSpan="2" VerticalAlignment="Top" ShowGridLines="True" HorizontalAlignment="Left">
+        <Grid Height="641" Margin="-478,-7,-479,0" Grid.RowSpan="2" VerticalAlignment="Top" ShowGridLines="True">
             <Line X1="0" Y1="50" X2="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Window}}" Y2="50" Stroke="#FFFEC63D" StrokeThickness="3"/>
-            <Line X1="0" Y1="295" X2="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Window}}" Y2="295" Stroke="#FFFEC63D" StrokeThickness="3" Width="297" HorizontalAlignment="Left"/>
-            <Line X1="0" Y1="315" X2="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Window}}" Y2="315" Stroke="#FFFEC63D" StrokeThickness="3" Width="297" HorizontalAlignment="Right"/>
-            <Line X1="0" Y1="375" X2="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Window}}" Y2="375" Stroke="#FFFEC63D" StrokeThickness="3" Width="297" HorizontalAlignment="Right"/>
-            <Line X1="0" Y1="435" X2="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Window}}" Y2="435" Stroke="#FFFEC63D" StrokeThickness="3" Width="297" HorizontalAlignment="Right"/>
-            <Line X1="298" Y1="50" X2="298" Y2="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Window}}" Stroke="#FFFEC63D" StrokeThickness="3"/>
-            <Line X1="699" Y1="50" X2="699" Y2="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Window}}" Stroke="#FFFEC63D" StrokeThickness="3"/>
-            <TextBlock HorizontalAlignment="Left" Height="59" Margin="698,58,0,0" TextWrapping="Wrap" Text="Next Event" VerticalAlignment="Top" Width="298" IsEnabled="False" Foreground="White" TextAlignment="Center" FontSize="24" FontFamily="Segoe UI Semibold"/>
-            <TextBlock Height="214" Margin="701,100,-2,0" TextWrapping="Wrap" VerticalAlignment="Top" Background="DarkGray" FontSize="24" FontWeight="Bold" TextAlignment="Center" Foreground="#FFFBFAFA"><Run/><LineBreak/><Run Text="Event"/><LineBreak/><Run Text="Due:"/><LineBreak/><Run Text="*Date*"/><LineBreak/><Run Text="*Time*"/></TextBlock>
-            <TextBlock HorizontalAlignment="Center" Height="42" Margin="702,335,0,0" TextWrapping="Wrap" Text="Events Completed This Month (MONTH):" VerticalAlignment="Top" Width="291" IsEnabled="False" Foreground="White" TextAlignment="Center" FontSize="14" FontWeight="Bold"/>
-            <TextBlock Height="42" Margin="702,394,0,0" TextWrapping="Wrap" Text="Tasks Completed on Time:" VerticalAlignment="Top" Width="298" IsEnabled="False" Foreground="White" TextAlignment="Center" FontSize="14" HorizontalAlignment="Center" FontWeight="Bold"/>
-            <TextBlock HorizontalAlignment="Left" Margin="712,454,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="165" Width="276" FontSize="14" Foreground="White" TextAlignment="Center" FontWeight="Bold"><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run Text="Productivity Ratio: __%"/><LineBreak/></TextBlock>
-            <TextBlock HorizontalAlignment="Left" Height="42" Margin="0,58,0,0" TextWrapping="Wrap" Text="Calendar" VerticalAlignment="Top" Width="298" IsEnabled="False" Foreground="White" TextAlignment="Center" FontSize="24" FontFamily="Segoe UI Semibold"/>
-            <Line X1="0" Y1="98" X2="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Window}}" Y2="98" Stroke="Black" StrokeThickness="3" Width="297" HorizontalAlignment="Left"/>
-            <Line X1="0" Y1="340" X2="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Window}}" Y2="340" Stroke="Black" StrokeThickness="3" Width="297" HorizontalAlignment="Left"/>
-            <Line X1="0" Y1="98" X2="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Window}}" Y2="98" Stroke="Black" StrokeThickness="3" Width="297" HorizontalAlignment="Right"/>
-            <TextBlock HorizontalAlignment="Left" Height="42" TextWrapping="Wrap" Text="Notes" VerticalAlignment="Center" Width="298" IsEnabled="False" Foreground="White" TextAlignment="Center" FontSize="24" FontFamily="Segoe UI Semibold"/>
-            <Button Content="Events" HorizontalAlignment="Left" Height="64" Margin="0,100,0,0" VerticalAlignment="Top" Width="296" Click="Button_Click_1" FontSize="16" Foreground="#FFFDFDFD" FontWeight="Bold" Background="DarkGray"/>
-            <Button Content="Import" HorizontalAlignment="Left" Height="64" Margin="0,165,0,0" VerticalAlignment="Top" Width="296" FontSize="16" FontWeight="Bold" Foreground="White" Background="DarkGray"/>
-            <Button Content="Export" HorizontalAlignment="Left" Height="64" Margin="0,230,0,0" VerticalAlignment="Top" Width="296" FontSize="16" Foreground="White" FontWeight="Bold" Background="DarkGray"/>
-            <ScrollViewer HorizontalAlignment="Left" Height="277" Margin="-2,342,0,0" VerticalAlignment="Top" Width="298" Cursor="ScrollSW"/>
-            <Calendar HorizontalAlignment="Left" Height="182" Margin="344,174,0,0" VerticalAlignment="Top" Width="277" Style="{StaticResource CustomCalendarStyle}"/>
+            <Line X1="0" Y1="295" X2="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Window}}" Y2="295" Stroke="#FFFEC63D" StrokeThickness="3" Width="413" HorizontalAlignment="Left"/>
+            <Line X1="0" Y1="315" X2="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Window}}" Y2="315" Stroke="#FFFEC63D" StrokeThickness="3" Width="413" HorizontalAlignment="Right"/>
+            <Line X1="0" Y1="375" X2="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Window}}" Y2="375" Stroke="#FFFEC63D" StrokeThickness="3" Width="413" HorizontalAlignment="Right"/>
+            <Line X1="0" Y1="435" X2="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Window}}" Y2="435" Stroke="#FFFEC63D" StrokeThickness="3" Width="413" HorizontalAlignment="Right"/>
+            <Line X1="414" Y1="50" X2="414" Y2="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Window}}" Stroke="#FFFEC63D" StrokeThickness="3"/>
+            <Line X1="956" Y1="50" X2="956" Y2="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Window}}" Stroke="#FFFEC63D" StrokeThickness="3"/>
+            <TextBlock HorizontalAlignment="Left" Height="54" Margin="958,58,0,0" TextWrapping="Wrap" Text="Next Event" VerticalAlignment="Top" Width="375" IsEnabled="False" Foreground="White" TextAlignment="Center" FontSize="24" FontFamily="Segoe UI Semibold"/>
+            <TextBlock Height="214" Margin="958,100,-2,0" TextWrapping="Wrap" VerticalAlignment="Top" Background="DarkGray" FontSize="24" FontWeight="Bold" TextAlignment="Center" Foreground="#FFFBFAFA"><Run/><LineBreak/><Run Text="Event"/><LineBreak/><Run Text="Due:"/><LineBreak/><Run Text="*Date*"/><LineBreak/><Run Text="*Time*"/></TextBlock>
+            <TextBlock HorizontalAlignment="Left" Height="42" Margin="958,327,0,0" TextWrapping="Wrap" Text="Events Completed This Month (MONTH):" VerticalAlignment="Top" Width="375" IsEnabled="False" Foreground="White" TextAlignment="Center" FontSize="14" FontWeight="Bold"/>
+            <TextBlock Height="42" Margin="958,386,0,0" TextWrapping="Wrap" Text="Tasks Completed on Time:" VerticalAlignment="Top" Width="375" IsEnabled="False" Foreground="White" TextAlignment="Center" FontSize="14" HorizontalAlignment="Left" FontWeight="Bold"/>
+            <TextBlock HorizontalAlignment="Left" Margin="958,443,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="176" Width="375" FontSize="14" Foreground="White" TextAlignment="Center" FontWeight="Bold"><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run Text="Productivity Ratio: __%"/><LineBreak/></TextBlock>
+            <TextBlock HorizontalAlignment="Left" Height="42" Margin="0,58,0,0" TextWrapping="Wrap" Text="Calendar" VerticalAlignment="Top" Width="413" IsEnabled="False" Foreground="White" TextAlignment="Center" FontSize="24" FontFamily="Segoe UI Semibold"/>
+            <Line X1="0" Y1="98" X2="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Window}}" Y2="98" Stroke="Black" StrokeThickness="3" Width="413" HorizontalAlignment="Left"/>
+            <Line X1="0" Y1="340" X2="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Window}}" Y2="340" Stroke="Black" StrokeThickness="3" Width="413" HorizontalAlignment="Left"/>
+            <Line X1="0" Y1="98" X2="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Window}}" Y2="98" Stroke="Black" StrokeThickness="3" Width="413" HorizontalAlignment="Right"/>
+            <TextBlock HorizontalAlignment="Left" Height="42" TextWrapping="Wrap" Text="Notes" VerticalAlignment="Center" Width="413" IsEnabled="False" Foreground="White" TextAlignment="Center" FontSize="24" FontFamily="Segoe UI Semibold"/>
+            <Button Content="Events" HorizontalAlignment="Left" Height="64" Margin="0,100,0,0" VerticalAlignment="Top" Width="413" Click="Button_Click_1" FontSize="16" Foreground="#FFFDFDFD" FontWeight="Bold" Background="DarkGray"/>
+            <Button Content="Import" HorizontalAlignment="Left" Height="64" Margin="0,165,0,0" VerticalAlignment="Top" Width="413" FontSize="16" FontWeight="Bold" Foreground="White" Background="DarkGray"/>
+            <Button Content="Export" HorizontalAlignment="Left" Height="64" Margin="0,230,0,0" VerticalAlignment="Top" Width="413" FontSize="16" Foreground="White" FontWeight="Bold" Background="DarkGray"/>
+            <ScrollViewer HorizontalAlignment="Left" Height="277" Margin="-2,342,0,0" VerticalAlignment="Top" Width="413" Cursor="ScrollSW"/>
+            <Viewbox HorizontalAlignment="Center" Height="572" Margin="0,47,0,0" VerticalAlignment="Top" Width="535" Stretch="Fill">
+                <Calendar HorizontalAlignment="Center" Height="166" VerticalAlignment="Top" Width="179" Style="{StaticResource CustomCalendarStyle}"/>
+            </Viewbox>
         </Grid>
     </Grid>
 </Window>
