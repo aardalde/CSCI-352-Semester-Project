@@ -13,5 +13,11 @@ namespace Productive
     /// </summary>
     public partial class App : Application
     {
+        private void ShowNewWindow_Click(object sender, RoutedEventArgs e)
+        {
+            EventsSubWindow eventsSubWindow = new EventsSubWindow();
+            eventsSubWindow.Show();
+        
+        }
     }
 }
