@@ -52,3 +52,5 @@ C:\Users\aardalde\Source\Repos\aardalde\CSCI-352-Semester-Project\Productive\Pro
 C:\Users\aardalde\Source\Repos\aardalde\CSCI-352-Semester-Project\Productive\Productive\obj\Debug\Productive Main Window.csproj.CoreCompileInputs.cache
 C:\Users\aardalde\Source\Repos\aardalde\CSCI-352-Semester-Project\Productive\Productive\obj\Debug\Productive.exe
 C:\Users\aardalde\Source\Repos\aardalde\CSCI-352-Semester-Project\Productive\Productive\obj\Debug\Productive.pdb
+C:\Users\alden\Source\Repos\aardalde\CSCI-352-Semester-Project\Productive\Productive\obj\Debug\Templates.baml
+C:\Users\alden\Source\Repos\aardalde\CSCI-352-Semester-Project\Productive\Productive\obj\Debug\App.baml
