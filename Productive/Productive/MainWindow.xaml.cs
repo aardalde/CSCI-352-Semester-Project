@@ -33,11 +33,14 @@ namespace Productive
             InitializeComponent();
             countdown = new DispatcherTimer(new TimeSpan(0, 0, 1), DispatcherPriority.Normal, delegate
             {
-                NextEventBlock.Text = "\n" + eventName + "\nDue" + "\n" + DateTime.Now.ToString("M") + " " + DateTime.Now.ToString("t") + "\n" + "Time Left:\n" + time.ToString("c");
+                NextEventBlock.Text = "\n" + eventName + "\nDue:" + "\n" + DateTime.Now.ToString("M") + " " + DateTime.Now.ToString("t") + "\n" + "Time Left:\n" + time.ToString("c");
                 if (time == TimeSpan.Zero)
                 {
                     countdown.Stop();
                     MessageBox.Show("YOU SUCK", "Seriously?", MessageBoxButton.OK);
+                    tasksOnTime--;
+                    ProgBar.Value = ((tasksOnTime / totalTasks) * 100);
+                    ProdRatioBlock.Text = "\n\nProductivity Ratio: " + ((tasksOnTime / totalTasks) * 100) + "%";
                 }
                 time = time.Add(TimeSpan.FromSeconds(-1)); //Countdown timer implementation -> https://stackoverflow.com/questions/16748371/how-to-make-a-wpf-countdown-timer
             }, Application.Current.Dispatcher);
@@ -45,7 +48,10 @@ namespace Productive
             countdown.Start();
             EventsCompletedBlock.Text = "Events Completed this Month (" + DateTime.Now.ToString("MMMM") + "):\n" + totalTasks.ToString();
             TasksCompletedBlock.Text = "Tasks Completed on Time: \n" + tasksOnTime;
-            ProdRatioBlock.Text = "Productivity Ratio: " + ((tasksOnTime / totalTasks) * 100) + "%";
+            ProdRatioBlock.Text = "\n\nProductivity Ratio: " + ((tasksOnTime / totalTasks) * 100) + "%";
+            ProgBar.Minimum= 0;
+            ProgBar.Maximum = 100;
+            ProgBar.Value = ((tasksOnTime / totalTasks) * 100);
         }
 
         public void Dumbass()
