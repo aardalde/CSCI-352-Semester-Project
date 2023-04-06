@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+*.vsidx
+/Productive/.vs/Productive/v17/.suo
+/Productive/Productive/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/Productive/Productive/obj/Debug/Productive_MarkupCompile.i.cache
+/Productive/Productive/obj/Debug/Productive_MarkupCompile.i.lref
+/.vs/slnx.sqlite
