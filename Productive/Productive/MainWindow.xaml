@@ -38,5 +38,6 @@
                 <Calendar x:Name="DarkCalendar" HorizontalAlignment="Center" Height="166" VerticalAlignment="Top" Width="179" Style="{StaticResource CustomCalendarStyle}" BorderBrush="#FF757575"/>
             </Viewbox>
         </Grid>
+        <ProgressBar x:Name="ProgBar" Margin="611,447,-347,71" Grid.Row="1"/>
     </Grid>
 </Window>
