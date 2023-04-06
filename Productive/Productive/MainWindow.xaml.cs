@@ -34,7 +34,7 @@ namespace Productive
             {
                 NextEventBlock.Text = eventName + "\nDue" + "\n" + DateTime.Now.ToString("M") + " " + DateTime.Now.ToString("t") + "\n" + time.ToString("c");
                 if (time == TimeSpan.Zero) countdown.Stop();
-                time = time.Add(TimeSpan.FromSeconds(-1));
+                time = time.Add(TimeSpan.FromSeconds(-1)); //Countdown timer implementation -> https://stackoverflow.com/questions/16748371/how-to-make-a-wpf-countdown-timer
             }, Application.Current.Dispatcher);
 
             countdown.Start();
