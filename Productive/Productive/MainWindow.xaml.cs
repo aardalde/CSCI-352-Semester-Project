@@ -26,6 +26,7 @@ namespace Productive
         double totalTasks = 5;
         double tasksOnTime = 3; //TODO: CHANGE IMPLEMENTAION
         string eventName = "Event";
+        int dumbassCount = 0;
 
         public MainWindow()
         {
@@ -45,17 +46,31 @@ namespace Productive
 
         private void EventsButton_Click(object sender, RoutedEventArgs e)
         {
-
+            dumbassCount++;
+            MessageBox.Show("You're not supposed to be here", "Go Away", MessageBoxButton.OK);
+            if(dumbassCount == 5)
+            {
+                MessageBox.Show("Alright buddy you lost your application privileges", "GET OUT", MessageBoxButton.OK);
+                System.Environment.Exit(0);
+            }
         }
 
         private void ImportButton_Click(object sender, RoutedEventArgs e)
         {
-
+            dumbassCount++;
+            while (true)
+            {
+                MessageBox.Show("You're not supposed to be here", "GET OUT", MessageBoxButton.OK);
+            }
         }
 
         private void ExportButton_Click(object sender, RoutedEventArgs e)
         {
-
+            dumbassCount++;
+            while (true)
+            {
+                MessageBox.Show("You're not supposed to be here", "GET OUT", MessageBoxButton.OK);
+            }
         }
     }
 }
