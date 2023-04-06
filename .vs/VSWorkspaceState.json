@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Productive",
+    "\\Productive\\Productive"
   ],
+  "SelectedNode": "\\Productive\\Productive\\MainWindow.xaml",
   "PreviewInSolutionExplorer": false
 }

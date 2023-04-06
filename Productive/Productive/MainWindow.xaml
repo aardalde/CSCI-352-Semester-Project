@@ -30,39 +30,10 @@
             <Line X1="0" Y1="340" X2="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Window}}" Y2="340" Stroke="Black" StrokeThickness="3" Width="413" HorizontalAlignment="Left"/>
             <Line X1="0" Y1="98" X2="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Window}}" Y2="98" Stroke="Black" StrokeThickness="3" Width="413" HorizontalAlignment="Right"/>
             <TextBlock x:Name="NotesTag" HorizontalAlignment="Left" Height="42" TextWrapping="Wrap" Text="Notes" VerticalAlignment="Center" Width="413" IsEnabled="False" Foreground="White" TextAlignment="Center" FontSize="24" FontFamily="Segoe UI Semibold"/>
-            <Button x:Name="EventsButton" Content="Events" HorizontalAlignment="Left" Height="64" Margin="0,100,0,0" VerticalAlignment="Top" Width="413" FontSize="16" Foreground="#FFFDFDFD" FontWeight="Bold" Background="#FF757575" Click="EventsButton_Click">
-                <Button.Style>
-                    <Style>
-                        <Style.Triggers>
-                            <Trigger Property="Button.IsMouseOver" Value="True">
-                                <Setter Property="Button.Background" Value="#FFFEC63D" />
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
-                </Button.Style>
-            </Button>
-            <Button x:Name="ImportButton" Content="Import" HorizontalAlignment="Left" Height="64" Margin="0,165,0,0" VerticalAlignment="Top" Width="413" FontSize="16" FontWeight="Bold" Foreground="White" Background="#FF757575" Click="ImportButton_Click">
-                <Button.Style>
-                    <Style>
-                        <Style.Triggers>
-                            <Trigger Property="Button.IsMouseOver" Value="True">
-                                <Setter Property="Button.Background" Value="#FFFEC63D" />
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
-                </Button.Style>
-            </Button>
-            <Button x:Name="ExportButton" Content="Export" HorizontalAlignment="Left" Height="64" Margin="0,230,0,0" VerticalAlignment="Top" Width="413" FontSize="16" Foreground="White" FontWeight="Bold" Background="#FF757575" Click="ExportButton_Click">
-                <Button.Style>
-                    <Style>
-                        <Style.Triggers>
-                            <Trigger Property="Button.IsMouseOver" Value="True">
-                                <Setter Property="Button.Background" Value="#FFFEC63D" />
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
-                </Button.Style>
-            </Button>
+            <Button x:Name="EventsButton" Content="Events" HorizontalAlignment="Left" Height="64" Margin="0,100,0,0" VerticalAlignment="Top" Width="413" FontSize="16" Foreground="#FFFDFDFD" FontWeight="Bold" Background="#FF757575" Click="EventsButton_Click"/>
+            <Button x:Name="ImportButton" Content="Import" HorizontalAlignment="Left" Height="64" Margin="0,165,0,0" VerticalAlignment="Top" Width="413" FontSize="16" FontWeight="Bold" Foreground="White" Background="#FF757575" Click="ImportButton_Click"/>
+            <Button x:Name="ExportButton" Content="Export" HorizontalAlignment="Left" Height="64" Margin="0,230,0,0" VerticalAlignment="Top" Width="413" FontSize="16" Foreground="White" FontWeight="Bold" Background="#FF757575" Click="ExportButton_Click"/>
+
             <ScrollViewer x:Name="NoteView" HorizontalAlignment="Left" Height="277" Margin="-2,342,0,0" VerticalAlignment="Top" Width="413" Cursor="Arrow" Background="#FF757575"/>
             <Viewbox HorizontalAlignment="Center" Height="572" Margin="0,47,0,0" VerticalAlignment="Top" Width="535" Stretch="Fill">
                 <Calendar x:Name="DarkCalendar" HorizontalAlignment="Center" Height="166" VerticalAlignment="Top" Width="179" Style="{StaticResource CustomCalendarStyle}" BorderBrush="#FF757575" BorderThickness="1"/>

@@ -33,7 +33,7 @@ namespace Productive
             InitializeComponent();
             countdown = new DispatcherTimer(new TimeSpan(0, 0, 1), DispatcherPriority.Normal, delegate
             {
-                NextEventBlock.Text = "\n" + eventName + "\nDue:" + "\n" + DateTime.Now.ToString("M") + " " + DateTime.Now.ToString("t") + "\n" + "Time Left:\n" + time.ToString("c");
+                NextEventBlock.Text = eventName + "\nDue:" + "\n" + DateTime.Now.ToString("M") + GetDaySuffix(DateTime.Now.ToString("d")) + " " + DateTime.Now.ToString("t") + "\n" + "Time Left:\n" + time.ToString("c");
                 if (time == TimeSpan.Zero)
                 {
                     countdown.Stop();
@@ -64,6 +64,25 @@ namespace Productive
                 System.Environment.Exit(0);
             }
         }
+
+        public string getSuffix(string day)
+        {
+            switch (day)
+                {
+                    case "1":
+                    case "21":
+                    case "31":
+                        return "st";
+                    case "2":
+                    case "22":
+                        return "nd";
+                    case "3":
+                    case "23":
+                        return "rd";
+                    default:
+                        return "th";
+                }
+            }
 
         private void EventsButton_Click(object sender, RoutedEventArgs e)
         {
