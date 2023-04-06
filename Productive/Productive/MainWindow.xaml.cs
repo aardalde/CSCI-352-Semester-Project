@@ -101,7 +101,10 @@ namespace Productive
 
         private void Note_Button_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("No functionality here. Enjoy infinite loop, nerd.", "Nah", MessageBoxButton.OKCancel);
+            while (true)
+            {
+                MessageBox.Show("No functionality here. Enjoy infinite loop, nerd.", "Nah", MessageBoxButton.OK);
+            }
         }
     }
 }
