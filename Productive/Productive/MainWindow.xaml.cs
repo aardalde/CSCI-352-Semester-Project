@@ -22,7 +22,7 @@ namespace Productive
     public partial class MainWindow : Window
     {
         DispatcherTimer countdown;
-        TimeSpan time = TimeSpan.FromSeconds(10);
+        TimeSpan time = TimeSpan.FromSeconds(45);
         double totalTasks = 5;
         double tasksOnTime = 3; //TODO: CHANGE IMPLEMENTAION
         string eventName = "Event 1";
