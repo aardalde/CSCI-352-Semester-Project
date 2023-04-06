@@ -33,7 +33,7 @@ namespace Productive
             InitializeComponent();
             countdown = new DispatcherTimer(new TimeSpan(0, 0, 1), DispatcherPriority.Normal, delegate
             {
-                NextEventBlock.Text = eventName + "\nDue:" + "\n" + DateTime.Now.ToString("M") + GetDaySuffix(DateTime.Now.ToString("d")) + " " + DateTime.Now.ToString("t") + "\n" + "Time Left:\n" + time.ToString("c");
+                NextEventBlock.Text = eventName + "\nDue:" + "\n" + DateTime.Now.ToString("M") + getSuffix(DateTime.Now.ToString("d")) + " " + DateTime.Now.ToString("t") + "\n\n" + "Time Left:\n" + time.ToString("c");
                 if (time == TimeSpan.Zero)
                 {
                     countdown.Stop();
@@ -97,6 +97,11 @@ namespace Productive
         private void ExportButton_Click(object sender, RoutedEventArgs e)
         {
             Dumbass();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
