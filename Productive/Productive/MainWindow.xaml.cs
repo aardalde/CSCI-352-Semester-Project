@@ -99,9 +99,9 @@ namespace Productive
             Dumbass();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void Note_Button_Click(object sender, RoutedEventArgs e)
         {
-
+            MessageBox.Show("No functionality here. Enjoy infinite loop, nerd.", "Nah", MessageBoxButton.OKCancel);
         }
     }
 }
