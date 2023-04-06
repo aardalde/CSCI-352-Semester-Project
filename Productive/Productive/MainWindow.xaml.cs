@@ -58,18 +58,22 @@ namespace Productive
         private void ImportButton_Click(object sender, RoutedEventArgs e)
         {
             dumbassCount++;
-            while (true)
+            MessageBox.Show("You're not supposed to be here", "Go Away", MessageBoxButton.OK);
+            if (dumbassCount == 5)
             {
-                MessageBox.Show("You're not supposed to be here", "GET OUT", MessageBoxButton.OK);
+                MessageBox.Show("Alright buddy you lost your application privileges", "GET OUT", MessageBoxButton.OK);
+                System.Environment.Exit(0);
             }
         }
 
         private void ExportButton_Click(object sender, RoutedEventArgs e)
         {
             dumbassCount++;
-            while (true)
+            MessageBox.Show("You're not supposed to be here", "Go Away", MessageBoxButton.OK);
+            if (dumbassCount == 5)
             {
-                MessageBox.Show("You're not supposed to be here", "GET OUT", MessageBoxButton.OK);
+                MessageBox.Show("Alright buddy you lost your application privileges", "GET OUT", MessageBoxButton.OK);
+                System.Environment.Exit(0);
             }
         }
     }
