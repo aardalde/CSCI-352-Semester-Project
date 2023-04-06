@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace Productive
 {
@@ -20,13 +21,25 @@ namespace Productive
     /// </summary>
     public partial class MainWindow : Window
     {
+        DispatcherTimer countdown;
+        TimeSpan time = TimeSpan.FromSeconds(10000);
+        double totalTasks = 5;
+        double tasksOnTime = 3; //TODO: CHANGE IMPLEMENTAION
+        string eventName = "Event";
+
         public MainWindow()
         {
             InitializeComponent();
-            double totalTasks = 5;
-            double tasksOnTime = 3; //TODO: CHANGE IMPLEMENTAION
-            EventsCompletedBlock.Text = "Events Completed this Month (" + DateTime.Now.ToString("MMMM") + "):";
-            TasksCompletedBlock.Text = "Tasks Completed on Time: " + tasksOnTime;
+            countdown = new DispatcherTimer(new TimeSpan(0, 0, 1), DispatcherPriority.Normal, delegate
+            {
+                NextEventBlock.Text = eventName + "\nDue" + "\n" + DateTime.Now.ToString("M") + " " + DateTime.Now.ToString("t") + "\n" + time.ToString("c");
+                if (time == TimeSpan.Zero) countdown.Stop();
+                time = time.Add(TimeSpan.FromSeconds(-1));
+            }, Application.Current.Dispatcher);
+
+            countdown.Start();
+            EventsCompletedBlock.Text = "Events Completed this Month (" + DateTime.Now.ToString("MMMM") + "):\n" + totalTasks.ToString();
+            TasksCompletedBlock.Text = "Tasks Completed on Time: \n" + tasksOnTime;
             ProdRatioBlock.Text = "Productivity Ratio: " + ((tasksOnTime / totalTasks) * 100) + "%";
         }
 
