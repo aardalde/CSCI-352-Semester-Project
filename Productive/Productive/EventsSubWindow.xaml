@@ -18,7 +18,7 @@
 
         <TextBlock Text="Project Manager"
                    Foreground="#525965"
-                   FontFamily="Harlow Solid Italic"
+                   FontFamily="Sitka Small Semibold"
                    FontSize="17"
                    VerticalAlignment="Bottom"
                    HorizontalAlignment="Right"
@@ -53,8 +53,8 @@
                           HorizontalAlignment="Right" />
 
                 <TextBlock Text="Productive"
-                           Foreground="#FFFFFF"
-                           FontFamily="Harlow Solid Italic"
+                           Foreground="#FFFEC63D"
+                           FontFamily="Sitka Small Semibold"
                            FontSize="35"
                            VerticalAlignment="Center"
                            HorizontalAlignment="Center" />
@@ -98,7 +98,7 @@
 
                     <MenuItem.Icon>
 
-                        <Image Source="Assets/img_music.png"
+                        <Image Source="Assets/img_input.png"
                            Stretch="None" />
 
                     </MenuItem.Icon>
@@ -110,7 +110,7 @@
 
                         <MenuItem.Icon>
 
-                            <Image Source="Assets/img_songs.png"
+                            <Image Source="Assets/img_input.png"
                                    Stretch="None" />
 
                         </MenuItem.Icon>
@@ -124,7 +124,7 @@
 
                         <MenuItem.Icon>
 
-                            <Image Source="Assets/img_album.png"
+                            <Image Source="Assets/img_input.png"
                                    Stretch="None" />
 
                         </MenuItem.Icon>
@@ -192,12 +192,26 @@
                     <MenuItem Header="Enable/Disable Notifications"
                               Template="{StaticResource Item_Template}">
                         
+                        <MenuItem.Icon>
+
+                            <Image Source="Assets/img_setting.png"
+                                   Stretch="None" />
+
+                        </MenuItem.Icon>
+                        
                     </MenuItem>
 
                     <!--// Notifications Submenu - Notification Settings //-->
 
                     <MenuItem Header="Notification Settings"
                               Template="{StaticResource Item_Template}">
+
+                        <MenuItem.Icon>
+
+                            <Image Source="Assets/img_setting.png"
+                                   Stretch="None" />
+
+                        </MenuItem.Icon>
 
                     </MenuItem>
 

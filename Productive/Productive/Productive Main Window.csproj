@@ -104,6 +104,7 @@
     <Resource Include="Fonts\Roboto-Light.ttf" />
     <Resource Include="Fonts\Segoe UI Bold.ttf" />
     <Resource Include="Fonts\Harlow Solid Italic Italic.ttf" />
+    <Resource Include="Fonts\Sitka-Small.ttf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
