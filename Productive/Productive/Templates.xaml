@@ -40,8 +40,8 @@
                 <ContentPresenter ContentSource="Header"
                                   Grid.Column="2"
                                   TextBlock.Foreground="White"
-                                  TextBlock.FontFamily="Fonts/#Roboto Light"
-                                  TextBlock.FontSize="20"
+                                  TextBlock.FontFamily="Fonts/#Segoe UI Bold"
+                                  TextBlock.FontSize="17"
                                   HorizontalAlignment="Left"
                                   RecognizesAccessKey="True"
                                   Margin="3,0,0,0"
@@ -167,8 +167,8 @@
                 <ContentPresenter ContentSource="Header"
                                   Grid.Column="2"
                                   TextBlock.Foreground="#FFFFFF"
-                                  TextBlock.FontFamily="Fonts/#Roboto Light"
-                                  TextBlock.FontSize="20"
+                                  TextBlock.FontFamily="Fonts/#Segoe UI Bold"
+                                  TextBlock.FontSize="18"
                                   HorizontalAlignment="Left"
                                   RecognizesAccessKey="True"
                                   Margin="3,0,0,0"
@@ -227,7 +227,7 @@
                     <ColumnDefinition MinWidth="22"
                                       Width="Auto" />
                     <ColumnDefinition Width="13" />
-                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="30" />
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="20" />
@@ -248,9 +248,9 @@
                 <ContentPresenter ContentSource="Header"
                                   Grid.Column="2"
                                   TextBlock.Foreground="White"
-                                  TextBlock.FontFamily="Fonts/#Roboto Light"
-                                  TextBlock.FontSize="20"
-                                  HorizontalAlignment="Left"
+                                  TextBlock.FontFamily="Fonts/#Segoe UI Bold"
+                                  TextBlock.FontSize="12"
+                                  HorizontalAlignment="Center"
                                   RecognizesAccessKey="True"
                                   Margin="3,0,0,0"
                                   VerticalAlignment="Center" />

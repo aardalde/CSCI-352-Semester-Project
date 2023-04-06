@@ -23,5 +23,25 @@ namespace Productive
         {
             InitializeComponent();
         }
+
+        private void MaxBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (WindowState == WindowState.Normal)
+            {
+                WindowState = WindowState.Maximized;
+            }
+            else
+            {
+                if (WindowState == WindowState.Maximized)
+                {
+                    WindowState = WindowState.Normal;
+                }
+            }
+        }
+
+        private void CloseBtn_Click_1(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }
