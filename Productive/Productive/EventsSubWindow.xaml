@@ -11,9 +11,9 @@
         WindowStyle="None"
         AllowsTransparency="True"
         WindowStartupLocation="CenterScreen">
-    
+
     <!--// Background Grid //-->
-    
+
     <Grid Background="#23262B">
 
         <TextBlock Text="Project Manager"
@@ -44,42 +44,46 @@
             <Grid Height="50"
                   VerticalAlignment="Top"
                   Margin="0,30,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="37*"/>
+                    <ColumnDefinition Width="78*"/>
+                </Grid.ColumnDefinitions>
 
                 <Border Background="#FFFEC63D"
-                          Height="25"
+                          Height="26"
                           CornerRadius="3,0,0,3"
                           Width="6"
                           VerticalAlignment="Center"
-                          HorizontalAlignment="Right" />
+                          HorizontalAlignment="Left" Grid.Column="1" Margin="150,0,0,0" />
 
                 <TextBlock Text="Productive"
                            Foreground="#FFFEC63D"
                            FontFamily="Sitka Small Semibold"
                            FontSize="35"
                            VerticalAlignment="Center"
-                           HorizontalAlignment="Center" />
+                           HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="17,0,0,0" />
 
             </Grid>
-                
-        <!--// Main Menu //-->
 
-        <Menu Height="450"
+            <!--// Main Menu //-->
+
+            <Menu Height="450"
               Background="Transparent"
               Margin="0,40,0,0">
 
-            <Menu.ItemsPanel>
+                <Menu.ItemsPanel>
 
-                <ItemsPanelTemplate>
+                    <ItemsPanelTemplate>
 
-                    <VirtualizingStackPanel Orientation="Vertical" />
+                        <VirtualizingStackPanel Orientation="Vertical" />
 
-                </ItemsPanelTemplate>
-                
-            </Menu.ItemsPanel>
+                    </ItemsPanelTemplate>
 
-            <!--// Main Menu - Home //-->
+                </Menu.ItemsPanel>
 
-            <MenuItem Header="Home"
+                <!--// Main Menu - Home //-->
+
+                <MenuItem Header="Home"
                       Template="{StaticResource Menu_Template}">
 
                     <MenuItem.Icon>
@@ -91,7 +95,7 @@
 
                 </MenuItem>
 
-            <!--// Main Menu - Events //-->
+                <!--// Main Menu - Events //-->
 
                 <MenuItem Header="Events"
                       Template="{StaticResource Menu_SubMenu_Template}">
@@ -142,7 +146,7 @@
 
                         <Image Source="Assets/img_search.png"
                                Stretch="None" />
-                        
+
                     </MenuItem.Icon>
 
                 </MenuItem>
@@ -156,7 +160,7 @@
 
                         <Image Source="Assets/img_folder.png"
                                Stretch="None" />
-                        
+
                     </MenuItem.Icon>
 
                 </MenuItem>
@@ -170,7 +174,7 @@
 
                         <Image Source="Assets/img_history.png"
                                Stretch="None" />
-                        
+
                     </MenuItem.Icon>
 
                 </MenuItem>
@@ -184,21 +188,21 @@
 
                         <Image Source="Assets/img_setting.png"
                                Stretch="None" />
-                        
+
                     </MenuItem.Icon>
 
                     <!--// Notifications Submenu - Enable/Disable Notifications //-->
 
                     <MenuItem Header="Enable/Disable Notifications"
                               Template="{StaticResource Item_Template}">
-                        
+
                         <MenuItem.Icon>
 
                             <Image Source="Assets/img_setting.png"
                                    Stretch="None" />
 
                         </MenuItem.Icon>
-                        
+
                     </MenuItem>
 
                     <!--// Notifications Submenu - Notification Settings //-->
@@ -260,5 +264,5 @@
                 Style="{StaticResource CloseBtnStyle}" Click="CloseBtn_Click_1" />
 
     </Grid>
-    
+
 </Window>

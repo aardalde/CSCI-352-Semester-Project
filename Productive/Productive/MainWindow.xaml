@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Productive"
         mc:Ignorable="d"
-        Title="MainWindow" Height="628" Width="1376" Background="#FF444444">
+        Title="MainWindow" Height="628" Width="1376" Background="#FF23262B">
     <Grid HorizontalAlignment="Center" Width="414">
         <Grid.RowDefinitions>
             <RowDefinition Height="49*"/>
@@ -21,7 +21,7 @@
             <Line X1="414" Y1="50" X2="414" Y2="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Window}}" Stroke="#FFFEC63D" StrokeThickness="3"/>
             <Line X1="956" Y1="50" X2="956" Y2="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Window}}" Stroke="#FFFEC63D" StrokeThickness="3"/>
             <TextBlock x:Name="NextEventTag" HorizontalAlignment="Left" Height="54" Margin="958,58,0,0" TextWrapping="Wrap" Text="Next Event" VerticalAlignment="Top" Width="415" IsEnabled="False" Foreground="White" TextAlignment="Center" FontSize="24" FontFamily="Segoe UI Semibold"/>
-            <TextBlock x:Name="NextEventBlock" Height="214" Margin="958,100,-2,0" TextWrapping="Wrap" VerticalAlignment="Top" Background="#FF757575" FontSize="24" FontWeight="Bold" TextAlignment="Center" Foreground="#FFFBFAFA"><Run/><LineBreak/><Run Text="Event"/><LineBreak/><Run Text="Due:"/><LineBreak/><Run Text="*Date*"/><LineBreak/><Run Text="*Time*"/></TextBlock>
+            <TextBlock x:Name="NextEventBlock" Height="214" Margin="958,100,-2,0" TextWrapping="Wrap" VerticalAlignment="Top" Background="#FF2E333A" FontSize="24" FontWeight="Bold" TextAlignment="Center" Foreground="#FFFBFAFA"><Run/><LineBreak/><Run Text="Event"/><LineBreak/><Run Text="Due:"/><LineBreak/><Run Text="*Date*"/><LineBreak/><Run Text="*Time*"/></TextBlock>
             <TextBlock x:Name="EventsCompletedBlock" HorizontalAlignment="Left" Height="42" Margin="958,327,0,0" TextWrapping="Wrap" Text="Events Completed This Month (MONTH):" VerticalAlignment="Top" Width="413" IsEnabled="False" Foreground="White" TextAlignment="Center" FontSize="14" FontWeight="Bold"/>
             <TextBlock x:Name="TasksCompletedBlock" Height="42" Margin="958,386,0,0" TextWrapping="Wrap" Text="Tasks Completed on Time:" VerticalAlignment="Top" Width="413" IsEnabled="False" Foreground="White" TextAlignment="Center" FontSize="14" HorizontalAlignment="Left" FontWeight="Bold"/>
             <TextBlock x:Name="ProdRatioBlock" HorizontalAlignment="Left" Margin="958,443,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="176" Width="415" FontSize="14" Foreground="White" TextAlignment="Center" FontWeight="Bold"><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run Text="Productivity Ratio: __%"/><LineBreak/></TextBlock>
@@ -30,10 +30,10 @@
             <Line X1="0" Y1="340" X2="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Window}}" Y2="340" Stroke="Black" StrokeThickness="3" Width="413" HorizontalAlignment="Left"/>
             <Line X1="0" Y1="98" X2="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Window}}" Y2="98" Stroke="Black" StrokeThickness="3" Width="413" HorizontalAlignment="Right"/>
             <TextBlock x:Name="NotesTag" HorizontalAlignment="Left" Height="42" TextWrapping="Wrap" Text="Notes" VerticalAlignment="Center" Width="413" IsEnabled="False" Foreground="White" TextAlignment="Center" FontSize="24" FontFamily="Segoe UI Semibold"/>
-            <Button x:Name="EventsButton" Content="Events" HorizontalAlignment="Left" Height="64" Margin="0,100,0,0" VerticalAlignment="Top" Width="413" FontSize="16" Foreground="#FFFDFDFD" FontWeight="Bold" Background="#FF757575" Click="EventsButton_Click"/>
-            <Button x:Name="ImportButton" Content="Import" HorizontalAlignment="Left" Height="64" Margin="0,165,0,0" VerticalAlignment="Top" Width="413" FontSize="16" FontWeight="Bold" Foreground="White" Background="#FF757575" Click="ImportButton_Click"/>
-            <Button x:Name="ExportButton" Content="Export" HorizontalAlignment="Left" Height="64" Margin="0,230,0,0" VerticalAlignment="Top" Width="413" FontSize="16" Foreground="White" FontWeight="Bold" Background="#FF757575" Click="ExportButton_Click"/>
-            <ScrollViewer x:Name="NoteView" HorizontalAlignment="Left" Height="277" Margin="-2,342,0,0" VerticalAlignment="Top" Width="413" Cursor="Arrow" Background="#FF757575"/>
+            <Button x:Name="EventsButton" Content="Events" HorizontalAlignment="Left" Height="64" Margin="0,100,0,0" VerticalAlignment="Top" Width="413" FontSize="16" Foreground="#FFFDFDFD" FontWeight="Bold" Background="#FF2E333A" Click="EventsButton_Click" BorderBrush="#FF2E333A"/>
+            <Button x:Name="ImportButton" Content="Import" HorizontalAlignment="Left" Height="64" Margin="0,165,0,0" VerticalAlignment="Top" Width="413" FontSize="16" FontWeight="Bold" Foreground="White" Background="#FF2E333A" Click="ImportButton_Click" BorderBrush="#FF2E333A"/>
+            <Button x:Name="ExportButton" Content="Export" HorizontalAlignment="Left" Height="64" Margin="0,230,0,0" VerticalAlignment="Top" Width="413" FontSize="16" Foreground="White" FontWeight="Bold" Background="#FF2E333A" Click="ExportButton_Click" BorderBrush="#FF2E333A"/>
+            <ScrollViewer x:Name="NoteView" HorizontalAlignment="Left" Height="277" Margin="-2,342,0,0" VerticalAlignment="Top" Width="413" Cursor="Arrow" Background="#FF2E333A"/>
             <Viewbox HorizontalAlignment="Center" Height="572" Margin="0,47,0,0" VerticalAlignment="Top" Width="535" Stretch="Fill">
                 <Calendar x:Name="DarkCalendar" HorizontalAlignment="Center" Height="166" VerticalAlignment="Top" Width="179" Style="{StaticResource CustomCalendarStyle}" BorderBrush="#FF757575" BorderThickness="1">
                     <Calendar.ContextMenu>
