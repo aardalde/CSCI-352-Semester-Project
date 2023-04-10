@@ -62,17 +62,6 @@ namespace Productive
             ProgBar.Value = ((tasksOnTime / totalTasks) * 100);
         }
 
-        public void Dumbass()
-        {
-            dumbassCount++;
-            MessageBox.Show("You're not supposed to be here", "Go Away", MessageBoxButton.OK);
-            if (dumbassCount == 5)
-            {
-                MessageBox.Show("Alright buddy you lost your application privileges", "GET OUT", MessageBoxButton.OK);
-                System.Environment.Exit(0);
-            }
-        }
-
         public string getSuffix(string day)
         {
             switch (day)
