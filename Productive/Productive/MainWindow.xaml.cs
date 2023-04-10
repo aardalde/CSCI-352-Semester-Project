@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -31,26 +32,33 @@ namespace Productive
         public MainWindow()
         {
             InitializeComponent();
+            CountdownEvent();
+            EventsCompletedBlock.Text = "Events Completed this Month (" + DateTime.Now.ToString("MMMM") + "):\n" + totalTasks.ToString();
+            TasksCompletedBlock.Text = "Tasks Completed on Time: \n" + tasksOnTime;
+            ProdRatioBlock.Text = "\n\nProductivity Ratio: " + ((tasksOnTime / totalTasks) * 100) + "%";
+            ProgBar.Value = ((tasksOnTime / totalTasks) * 100);
+        }
+
+        public void CountdownEvent()
+        {
             countdown = new DispatcherTimer(new TimeSpan(0, 0, 1), DispatcherPriority.Normal, delegate
             {
                 NextEventBlock.Text = eventName + "\nDue:" + "\n" + DateTime.Now.ToString("M") + getSuffix(DateTime.Now.ToString("d")) + " " + DateTime.Now.ToString("t") + "\n\n" + "Time Left:\n" + time.ToString("c");
                 if (time == TimeSpan.Zero)
                 {
                     countdown.Stop();
-                    MessageBox.Show("YOU SUCK", "Seriously?", MessageBoxButton.OK);
                     tasksOnTime--;
-                    ProgBar.Value = ((tasksOnTime / totalTasks) * 100);
-                    ProdRatioBlock.Text = "\n\nProductivity Ratio: " + ((tasksOnTime / totalTasks) * 100) + "%";
+                    UpdateProductivity();
                 }
                 time = time.Add(TimeSpan.FromSeconds(-1)); //Countdown timer implementation -> https://stackoverflow.com/questions/16748371/how-to-make-a-wpf-countdown-timer
             }, Application.Current.Dispatcher);
 
             countdown.Start();
-            EventsCompletedBlock.Text = "Events Completed this Month (" + DateTime.Now.ToString("MMMM") + "):\n" + totalTasks.ToString();
-            TasksCompletedBlock.Text = "Tasks Completed on Time: \n" + tasksOnTime;
+        }
+
+        public void UpdateProductivity()
+        {
             ProdRatioBlock.Text = "\n\nProductivity Ratio: " + ((tasksOnTime / totalTasks) * 100) + "%";
-            ProgBar.Minimum= 0;
-            ProgBar.Maximum = 100;
             ProgBar.Value = ((tasksOnTime / totalTasks) * 100);
         }
 
@@ -92,12 +100,10 @@ namespace Productive
 
         private void ImportButton_Click(object sender, RoutedEventArgs e)
         {
-            Dumbass();
         }
 
         private void ExportButton_Click(object sender, RoutedEventArgs e)
         {
-            Dumbass();
         }
 
         private void Note_Button_Click(object sender, RoutedEventArgs e)
@@ -106,6 +112,14 @@ namespace Productive
             {
                 MessageBox.Show("No functionality here. Enjoy infinite loop, nerd.", "Nah", MessageBoxButton.OK);
             }
+        }
+
+        private void ProgBar_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            ProgBar.Minimum = 0;
+            ProgBar.Maximum = 100;
+
+            UpdateProductivity();
         }
     }
 }
