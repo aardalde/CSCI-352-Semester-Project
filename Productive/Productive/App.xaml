@@ -5,34 +5,39 @@
              StartupUri="MainWindow.xaml">
 
     <Application.Resources>
-        <Style x:Key="CustomCalendarStyle" TargetType="{x:Type Calendar}">
-            <Setter Property="Background" Value="#A9A9A9"/>
-            <Setter Property="CalendarDayButtonStyle">
-                <Setter.Value>
-                    <Style TargetType="{x:Type CalendarDayButton}">
-                        <Style.Triggers>
-                            <Trigger Property="IsToday" Value="True">
-                                <Setter Property="Background" Value="#FFFEC63D"/>
-                            </Trigger>
-                            <Trigger Property="IsSelected" Value="True">
-                                <Setter Property="Background" Value="#FFFEC63D" />
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
-                </Setter.Value>
-            </Setter>
-        </Style>
-        <Style x:Key="SomeButtonStyle" TargetType="Button">
-            <Setter Property="Background" Value="Transparent" />
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="Button">
-                        <Grid Background="{TemplateBinding Background}">
-                            <ContentPresenter />
-                        </Grid>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Templates.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <Style x:Key="CustomCalendarStyle" TargetType="{x:Type Calendar}">
+                <Setter Property="Background" Value="#A9A9A9"/>
+                <Setter Property="CalendarDayButtonStyle">
+                    <Setter.Value>
+                        <Style TargetType="{x:Type CalendarDayButton}">
+                            <Style.Triggers>
+                                <Trigger Property="IsToday" Value="True">
+                                    <Setter Property="Background" Value="#FFFEC63D"/>
+                                </Trigger>
+                                <Trigger Property="IsSelected" Value="True">
+                                    <Setter Property="Background" Value="#FFFEC63D" />
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <Style x:Key="SomeButtonStyle" TargetType="Button">
+                <Setter Property="Background" Value="Transparent" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Grid Background="{TemplateBinding Background}">
+                                <ContentPresenter />
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
