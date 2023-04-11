@@ -96,10 +96,8 @@ namespace Productive
 
         private void Note_Button_Click(object sender, RoutedEventArgs e)
         {
-            while (true)
-            {
-                MessageBox.Show("No functionality here. Enjoy infinite loop, nerd.", "Nah", MessageBoxButton.OK);
-            }
+            NotePad notePad = new NotePad();
+            notePad.Show();
         }
 
         private void ProgBar_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)

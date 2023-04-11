@@ -1,0 +1,59 @@
+﻿<Window x:Class="Productive.NotePad"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Productive"
+        mc:Ignorable="d"
+        Title="NotePad" Height="400" Width="500">
+
+    <Grid Background="#FF23262B">
+        
+        <Button x:Name="File_Button" 
+                Content="File" 
+                FontSize="16" 
+                Foreground="#FFFDFDFD" 
+                FontWeight="Bold" 
+                FontFamily="Fonts/#Segoe UI Bold"
+                Background="#FF2E333A" 
+                BorderBrush="#FF2E333A"
+                HorizontalAlignment="Left" 
+                Margin="10,10,0,0" 
+                VerticalAlignment="Top"/>
+
+        <Button x:Name="Edit_Button"
+                Content="Edit" 
+                FontSize="16" 
+                Foreground="#FFFDFDFD" 
+                FontWeight="Bold" 
+                FontFamily="Fonts/#Segoe UI Bold"
+                Background="#FF2E333A" 
+                BorderBrush="#FF2E333A"
+                HorizontalAlignment="Left" 
+                Margin="45,10,0,0" 
+                VerticalAlignment="Top" RenderTransformOrigin="0.286,0.149"/>
+
+        <Button x:Name="View_Button"
+                Content="View"
+                FontSize="16" 
+                Foreground="#FFFDFDFD" 
+                FontWeight="Bold" 
+                FontFamily="Fonts/#Segoe UI Bold"
+                Background="#FF2E333A" 
+                BorderBrush="#FF2E333A"
+                HorizontalAlignment="Left" 
+                Margin="83,10,0,0" 
+                VerticalAlignment="Top"/>
+        
+        <TextBox Background="#F5F5DC" 
+                 HorizontalAlignment="Center" 
+                 Margin="0,35,0,0" 
+                 TextWrapping="Wrap" 
+                 Text="TextBox" 
+                 VerticalAlignment="Top"
+                 Width="480" 
+                 Height="339"/>
+
+    </Grid>
+    
+</Window>
