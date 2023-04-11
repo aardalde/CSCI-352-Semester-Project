@@ -27,7 +27,6 @@ namespace Productive
         double totalTasks = 5;
         double tasksOnTime = 3; //TODO: CHANGE IMPLEMENTAION
         string eventName = "Event 1";
-        int dumbassCount = 0;
 
         public MainWindow()
         {

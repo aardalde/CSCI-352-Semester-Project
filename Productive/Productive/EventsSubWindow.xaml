@@ -98,7 +98,7 @@
                 <!--// Main Menu - Events //-->
 
                 <MenuItem Header="Events"
-                      Template="{StaticResource Menu_SubMenu_Template}">
+                      Template="{StaticResource Menu_SubMenu_Template}" Click="MenuItem_Click">
 
                     <MenuItem.Icon>
 
