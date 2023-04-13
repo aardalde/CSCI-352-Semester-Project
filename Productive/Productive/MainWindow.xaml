@@ -46,7 +46,19 @@
                 </Calendar>
             </Viewbox>
             <ProgressBar x:Name="ProgBar" Margin="1090,522,131,101" Foreground="#FFFEC63D" ValueChanged="ProgBar_ValueChanged"/>
-            <Label Content="User1" HorizontalAlignment="Left" Height="28" Margin="1270,15,0,0" VerticalAlignment="Top" Width="64" Foreground="#FFFEC63D" FontWeight="Bold" FontSize="14"/>
+            <Button x:Name="User_Login"
+                    Content="User1" 
+                    HorizontalAlignment="Left" 
+                    Height="28" 
+                    Margin="1270,15,0,0" 
+                    VerticalAlignment="Top"
+                    FontWeight="Bold" 
+                    FontFamily="Fonts/#Segoe UI Bold"
+                    Background="#FF2E333A" 
+                    BorderBrush="#FF2E333A"
+                    Width="64" 
+                    Foreground="#FFFEC63D" 
+                    FontSize="14" Click="Button_Click"/>
             <Button x:Name="Note_Button" Content="+" HorizontalAlignment="Left" Height="42" Margin="361,327,0,0" VerticalAlignment="Top" Width="28" Foreground="#FFFEC63D" Background="Transparent" FontSize="36" BorderBrush="Transparent" Style="{StaticResource SomeButtonStyle}" Click="Note_Button_Click"/>
         </Grid>
     </Grid>

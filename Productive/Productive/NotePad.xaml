@@ -49,10 +49,11 @@
                  HorizontalAlignment="Center" 
                  Margin="0,35,0,0" 
                  TextWrapping="Wrap" 
-                 Text="TextBox" 
+                 Text="" 
                  VerticalAlignment="Top"
                  Width="480" 
                  Height="339"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="-130,314,0,0" VerticalAlignment="Top"/>
 
     </Grid>
     
