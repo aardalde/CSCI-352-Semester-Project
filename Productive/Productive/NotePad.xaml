@@ -9,7 +9,7 @@
 
     <Grid Background="#FF23262B">
         
-        <Button x:Name="File_Button" 
+        <Button x:Name="Save_Button" 
                 Content="File" 
                 FontSize="16" 
                 Foreground="#FFFDFDFD" 
@@ -19,7 +19,7 @@
                 BorderBrush="#FF2E333A"
                 HorizontalAlignment="Left" 
                 Margin="10,10,0,0" 
-                VerticalAlignment="Top"/>
+                VerticalAlignment="Top" Click="Save_Button_Click"/>
 
         <Button x:Name="Edit_Button"
                 Content="Edit" 
@@ -44,8 +44,8 @@
                 HorizontalAlignment="Left" 
                 Margin="83,10,0,0" 
                 VerticalAlignment="Top"/>
-        
-        <TextBox Background="#F5F5DC" 
+
+        <TextBox x:Name="UserNoteBox" Background="#F5F5DC" 
                  HorizontalAlignment="Center" 
                  Margin="0,35,0,0" 
                  TextWrapping="Wrap" 
@@ -53,7 +53,6 @@
                  VerticalAlignment="Top"
                  Width="480" 
                  Height="339"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="-130,314,0,0" VerticalAlignment="Top"/>
 
     </Grid>
     

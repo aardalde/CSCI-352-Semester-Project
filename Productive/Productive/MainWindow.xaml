@@ -33,7 +33,9 @@
             <Button x:Name="EventsButton" Content="Events" HorizontalAlignment="Left" Height="64" Margin="0,100,0,0" VerticalAlignment="Top" Width="413" FontSize="16" Foreground="#FFFDFDFD" FontWeight="Bold" Background="#FF2E333A" Click="EventsButton_Click" BorderBrush="#FF2E333A"/>
             <Button x:Name="ImportButton" Content="Import" HorizontalAlignment="Left" Height="64" Margin="0,165,0,0" VerticalAlignment="Top" Width="413" FontSize="16" FontWeight="Bold" Foreground="White" Background="#FF2E333A" Click="ImportButton_Click" BorderBrush="#FF2E333A"/>
             <Button x:Name="ExportButton" Content="Export" HorizontalAlignment="Left" Height="64" Margin="0,230,0,0" VerticalAlignment="Top" Width="413" FontSize="16" Foreground="White" FontWeight="Bold" Background="#FF2E333A" Click="ExportButton_Click" BorderBrush="#FF2E333A"/>
-            <ScrollViewer x:Name="NoteView" HorizontalAlignment="Left" Height="277" Margin="-2,342,0,0" VerticalAlignment="Top" Width="413" Cursor="Arrow" Background="#FF2E333A"/>
+            <ScrollViewer x:Name="NoteView" HorizontalAlignment="Left" Height="277" Margin="0,342,0,0" VerticalAlignment="Top" Width="411" Cursor="Arrow" Background="#FF2E333A">
+                <StackPanel x:Name="NotePanel" Height="272" Width="385"/>
+            </ScrollViewer>
             <Viewbox HorizontalAlignment="Center" Height="572" Margin="0,47,0,0" VerticalAlignment="Top" Width="535" Stretch="Fill">
                 <Calendar x:Name="DarkCalendar" HorizontalAlignment="Center" Height="166" VerticalAlignment="Top" Width="179" Style="{StaticResource CustomCalendarStyle}" BorderBrush="#FF757575" BorderThickness="1">
                     <Calendar.ContextMenu>
@@ -45,12 +47,12 @@
                     </Calendar.ContextMenu>
                 </Calendar>
             </Viewbox>
-            
+
             <ProgressBar x:Name="ProgBar" 
                          Margin="1090,522,131,101" 
                          Foreground="#FFFEC63D" 
                          ValueChanged="ProgBar_ValueChanged"/>
-            
+
             <Button x:Name="User_Login"
                     Content="User1" 
                     HorizontalAlignment="Left" 
@@ -64,7 +66,7 @@
                     Width="64" 
                     Foreground="#FFFEC63D" 
                     FontSize="14" Click="Button_Click"/>
-            
+
             <Button x:Name="Note_Button" 
                     Content="+" 
                     HorizontalAlignment="Left" 

@@ -97,6 +97,7 @@ namespace Productive
         private void Note_Button_Click(object sender, RoutedEventArgs e)
         {
             NotePad notePad = new NotePad();
+            Hide();
             notePad.Show();
         }
 
