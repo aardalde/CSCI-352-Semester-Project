@@ -110,7 +110,8 @@ namespace Productive
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            UserLogin userLogin = new UserLogin();
+            userLogin.Show();
         }
     }
 }
