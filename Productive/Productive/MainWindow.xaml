@@ -45,7 +45,12 @@
                     </Calendar.ContextMenu>
                 </Calendar>
             </Viewbox>
-            <ProgressBar x:Name="ProgBar" Margin="1090,522,131,101" Foreground="#FFFEC63D" ValueChanged="ProgBar_ValueChanged"/>
+            
+            <ProgressBar x:Name="ProgBar" 
+                         Margin="1090,522,131,101" 
+                         Foreground="#FFFEC63D" 
+                         ValueChanged="ProgBar_ValueChanged"/>
+            
             <Button x:Name="User_Login"
                     Content="User1" 
                     HorizontalAlignment="Left" 
@@ -59,7 +64,20 @@
                     Width="64" 
                     Foreground="#FFFEC63D" 
                     FontSize="14" Click="Button_Click"/>
-            <Button x:Name="Note_Button" Content="+" HorizontalAlignment="Left" Height="42" Margin="361,327,0,0" VerticalAlignment="Top" Width="28" Foreground="#FFFEC63D" Background="Transparent" FontSize="36" BorderBrush="Transparent" Style="{StaticResource SomeButtonStyle}" Click="Note_Button_Click"/>
+            
+            <Button x:Name="Note_Button" 
+                    Content="+" 
+                    HorizontalAlignment="Left" 
+                    Height="42" 
+                    Margin="361,327,0,0" 
+                    VerticalAlignment="Top" 
+                    Width="28" 
+                    Foreground="#FFFEC63D" 
+                    Background="Transparent" 
+                    FontSize="36" 
+                    BorderBrush="Transparent" 
+                    Style="{StaticResource SomeButtonStyle}" 
+                    Click="Note_Button_Click"/>
         </Grid>
     </Grid>
 </Window>

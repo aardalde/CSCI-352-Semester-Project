@@ -44,7 +44,7 @@
                 Background="#FF23262B" 
                 BorderBrush="#FF23262B"
                 HorizontalAlignment="Left" 
-                Margin="11,86,0,0" 
+                Margin="3,86,0,0" 
                 Height="30"
                 VerticalAlignment="Top"/>
 
@@ -65,7 +65,7 @@
                 Background="#FF23262B" 
                 BorderBrush="#FF23262B"
                 HorizontalAlignment="Left" 
-                Margin="11,142,0,0" 
+                Margin="3,142,0,0" 
                 Height="30"
                 VerticalAlignment="Top" RenderTransformOrigin="0.187,0.201"/>
 
