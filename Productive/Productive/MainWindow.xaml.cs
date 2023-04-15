@@ -22,11 +22,11 @@ namespace Productive
     /// </summary>
     public partial class MainWindow : Window
     {
-        DispatcherTimer countdown;
-        TimeSpan time = TimeSpan.FromSeconds(45);
-        double totalTasks = 5;
-        double tasksOnTime = 3; //TODO: CHANGE IMPLEMENTAION
-        string eventName = "Event 1";
+        private DispatcherTimer countdown;
+        private TimeSpan time = TimeSpan.FromSeconds(45);
+        private double totalTasks = 5;
+        private double tasksOnTime = 3; //TODO: CHANGE IMPLEMENTAION
+        private string eventName = "Event 1";
 
         public MainWindow()
         {
@@ -95,7 +95,7 @@ namespace Productive
         }
 
         private void Note_Button_Click(object sender, RoutedEventArgs e)
-        {
+        { 
             NotePad notePad = new NotePad();
             Hide();
             notePad.Show();

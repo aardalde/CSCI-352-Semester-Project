@@ -21,6 +21,7 @@ namespace Productive
     public partial class NotePad : Window
     {
         MainWindow main = new MainWindow();
+        int noteCount= 0;
         public NotePad()
         {
             InitializeComponent();
@@ -29,23 +30,31 @@ namespace Productive
         public void AddNote()
         {
             string noteText;
-            noteText = UserNoteBox.Text.ToString();
-
+            List<TextBox> notes = new List<TextBox>();
             TextBox noteTextBox = new TextBox();
-            noteTextBox.Text = noteText;
-            noteTextBox.Width = 200;
-            noteTextBox.Height = 50;
+
+            noteText = UserNoteBox.Text;
+            noteTextBox.TextAlignment = TextAlignment.Center;
+            noteTextBox.Text = "Note " + noteCount + "\n" + noteText;
+            noteTextBox.Width = 250;
+            noteTextBox.Height = 200;
             noteTextBox.HorizontalAlignment = HorizontalAlignment.Center;
             noteTextBox.VerticalAlignment = VerticalAlignment.Center;
             noteTextBox.FontSize = 20;
 
-            main.NotePanel.Children.Add(noteTextBox);
+            notes.Add(noteTextBox);
+
+            foreach (TextBox b in notes) {
+                main.NotePanel.Children.Add(noteTextBox);
+            }
+
             main.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void Save_Button_Click(object sender, RoutedEventArgs e)
         {
+            noteCount++;
             AddNote();
         }
     }
