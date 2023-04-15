@@ -10,7 +10,7 @@
     <Grid Background="#FF23262B">
         
         <Button x:Name="Save_Button" 
-                Content="File" 
+                Content="Save" 
                 FontSize="16" 
                 Foreground="#FFFDFDFD" 
                 FontWeight="Bold" 
@@ -19,31 +19,7 @@
                 BorderBrush="#FF2E333A"
                 HorizontalAlignment="Left" 
                 Margin="10,10,0,0" 
-                VerticalAlignment="Top" Click="Save_Button_Click"/>
-
-        <Button x:Name="Edit_Button"
-                Content="Edit" 
-                FontSize="16" 
-                Foreground="#FFFDFDFD" 
-                FontWeight="Bold" 
-                FontFamily="Fonts/#Segoe UI Bold"
-                Background="#FF2E333A" 
-                BorderBrush="#FF2E333A"
-                HorizontalAlignment="Left" 
-                Margin="45,10,0,0" 
-                VerticalAlignment="Top" RenderTransformOrigin="0.286,0.149"/>
-
-        <Button x:Name="View_Button"
-                Content="View"
-                FontSize="16" 
-                Foreground="#FFFDFDFD" 
-                FontWeight="Bold" 
-                FontFamily="Fonts/#Segoe UI Bold"
-                Background="#FF2E333A" 
-                BorderBrush="#FF2E333A"
-                HorizontalAlignment="Left" 
-                Margin="83,10,0,0" 
-                VerticalAlignment="Top"/>
+                VerticalAlignment="Top" Click="Save_Button_Click" Width="68"/>
 
         <TextBox x:Name="UserNoteBox" Background="#F5F5DC" 
                  HorizontalAlignment="Center" 
