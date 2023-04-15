@@ -84,7 +84,7 @@
                 <!--// Main Menu - Home //-->
 
                 <MenuItem Header="Home"
-                      Template="{StaticResource Menu_Template}">
+                      Template="{StaticResource Menu_Template}" Click="MenuItem_Click_2">
 
                     <MenuItem.Icon>
 
@@ -238,7 +238,7 @@
                 <!--// Main Menu - Exit //-->
 
                 <MenuItem Header="Exit"
-                      Template="{StaticResource Menu_Template}">
+                      Template="{StaticResource Menu_Template}" Click="MenuItem_Click_1">
 
                     <MenuItem.Icon>
 
@@ -256,12 +256,9 @@
         <!--// Maximize / Minimize App //-->
 
         <Button x:Name="MaxBtn"
-                Style="{StaticResource MaxBtnStyle}" Click="MaxBtn_Click" />
+                Style="{StaticResource MaxBtnStyle}" Click="MaxBtn_Click" Margin="0,10,15,0" />
 
         <!--// Close App //-->
-
-        <Button x:Name="CloseBtn"
-                Style="{StaticResource CloseBtnStyle}" Click="CloseBtn_Click_1" />
 
     </Grid>
 

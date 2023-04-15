@@ -39,14 +39,25 @@ namespace Productive
             }
         }
 
-        private void CloseBtn_Click_1(object sender, RoutedEventArgs e)
-        {
-            Close();
-        }
-
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
 
         }
+
+        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult choice = MessageBox.Show("Are you sure you want to close Productive?", "Caution", MessageBoxButton.YesNo);
+
+            if (choice == MessageBoxResult.Yes)
+            {
+                Application.Current.Shutdown();
+            }
+        }
+
+        private void MenuItem_Click_2(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
+
