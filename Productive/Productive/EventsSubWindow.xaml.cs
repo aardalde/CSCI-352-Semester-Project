@@ -19,6 +19,8 @@ namespace Productive
     /// </summary>
     public partial class EventsSubWindow : Window
     {
+        AddEventSubWindow addEvent = new AddEventSubWindow();
+        MainWindow main = new MainWindow();
         public EventsSubWindow()
         {
             InitializeComponent();
@@ -41,7 +43,7 @@ namespace Productive
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
-
+            addEvent.Show();
         }
 
         private void MenuItem_Click_1(object sender, RoutedEventArgs e)
@@ -57,6 +59,7 @@ namespace Productive
         private void MenuItem_Click_2(object sender, RoutedEventArgs e)
         {
             this.Close();
+            main.Show();
         }
     }
 }

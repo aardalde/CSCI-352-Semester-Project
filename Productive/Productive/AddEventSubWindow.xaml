@@ -1,0 +1,71 @@
+﻿<Window x:Class="Productive.AddEventSubWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Productive"
+        mc:Ignorable="d"
+        Title="AddEventSubWindow" Height="500" Width="500"
+        WindowStartupLocation="CenterScreen">
+    <Grid Background="#FF23262B">
+        <Line X1="0" Y1="40" X2="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Window}}" Y2="40" Stroke="#FFFEC63D" StrokeThickness="3"/>
+        <Label Content="Add Event" HorizontalAlignment="Center" Height="32" VerticalAlignment="Top" Width="144" FontFamily="Sitka Small Semibold" FontSize="24" Foreground="#FFFEC63D" Margin="0,8,0,0"/>
+        <Grid x:Name="SubGrid" HorizontalAlignment="Center" Height="444" Margin="0,40,0,0" VerticalAlignment="Top" Width="500" Background="#FF2E333A">
+            <Label Content="Event Name:" HorizontalAlignment="Center" Height="26" Margin="0,10,0,0" VerticalAlignment="Top" Width="82" FontWeight="Bold" Foreground="#FFFBFBFB"/>
+            <TextBox x:Name="EventNameBar" HorizontalAlignment="Center" Height="20" Margin="0,41,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="234" Background="Gray" BorderBrush="Gray" FontStyle="Italic" Foreground="#FFFBFBFB" 
+             LostFocus="TextBar_LostFocus" PreviewKeyDown="TextBar_PreviewKeyDown" PreviewTextInput="TextBar_PreviewTextInput"/>
+            <Label Content="Month, Day, and Time:" HorizontalAlignment="Center" Height="26" Margin="0,91,0,0" VerticalAlignment="Top" Width="137" FontWeight="Bold" Foreground="#FFFBFBFB"/>
+            <ComboBox HorizontalAlignment="Left" Height="21" Margin="182,122,0,0" VerticalAlignment="Top" Width="68" FontSize="10">
+                <ComboBoxItem IsSelected="True">Month</ComboBoxItem>
+                <ComboBoxItem>January</ComboBoxItem>
+                <ComboBoxItem>February</ComboBoxItem>
+                <ComboBoxItem>March</ComboBoxItem>
+                <ComboBoxItem>April</ComboBoxItem>
+                <ComboBoxItem>May</ComboBoxItem>
+                <ComboBoxItem>June</ComboBoxItem>
+                <ComboBoxItem>July</ComboBoxItem>
+                <ComboBoxItem>August</ComboBoxItem>
+                <ComboBoxItem>September</ComboBoxItem>
+                <ComboBoxItem>October</ComboBoxItem>
+                <ComboBoxItem>November</ComboBoxItem>
+                <ComboBoxItem>December</ComboBoxItem>
+            </ComboBox>
+
+            <ComboBox HorizontalAlignment="Left" Height="21" Margin="255,122,0,0" VerticalAlignment="Top" Width="68" FontSize="10">
+                <ComboBoxItem IsSelected="True">Day</ComboBoxItem>
+                <ComboBoxItem>1</ComboBoxItem>
+                <ComboBoxItem>2</ComboBoxItem>
+                <ComboBoxItem>3</ComboBoxItem>
+                <ComboBoxItem>4</ComboBoxItem>
+                <ComboBoxItem>5</ComboBoxItem>
+                <ComboBoxItem>6</ComboBoxItem>
+                <ComboBoxItem>7</ComboBoxItem>
+                <ComboBoxItem>8</ComboBoxItem>
+                <ComboBoxItem>9</ComboBoxItem>
+                <ComboBoxItem>10</ComboBoxItem>
+                <ComboBoxItem>11</ComboBoxItem>
+                <ComboBoxItem>12</ComboBoxItem>
+                <ComboBoxItem>13</ComboBoxItem>
+                <ComboBoxItem>14</ComboBoxItem>
+                <ComboBoxItem>15</ComboBoxItem>
+                <ComboBoxItem>16</ComboBoxItem>
+                <ComboBoxItem>17</ComboBoxItem>
+                <ComboBoxItem>18</ComboBoxItem>
+                <ComboBoxItem>19</ComboBoxItem>
+                <ComboBoxItem>20</ComboBoxItem>
+                <ComboBoxItem>21</ComboBoxItem>
+                <ComboBoxItem>22</ComboBoxItem>
+                <ComboBoxItem>23</ComboBoxItem>
+                <ComboBoxItem>24</ComboBoxItem>
+                <ComboBoxItem>25</ComboBoxItem>
+                <ComboBoxItem>26</ComboBoxItem>
+                <ComboBoxItem>27</ComboBoxItem>
+                <ComboBoxItem>28</ComboBoxItem>
+                <ComboBoxItem>29</ComboBoxItem>
+                <ComboBoxItem>30</ComboBoxItem>
+                <ComboBoxItem>31</ComboBoxItem>
+            </ComboBox>
+        </Grid>
+
+    </Grid>
+</Window>

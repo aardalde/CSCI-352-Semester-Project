@@ -97,7 +97,7 @@
 
                 <!--// Main Menu - Events //-->
 
-                <MenuItem Header="Events"
+                <MenuItem Header="Add Event"
                       Template="{StaticResource Menu_SubMenu_Template}" Click="MenuItem_Click">
 
                     <MenuItem.Icon>
@@ -107,35 +107,8 @@
 
                     </MenuItem.Icon>
 
-                    <!--// Events Submenu - New Event //-->
-
-                    <MenuItem Header="New Event"
-                              Template="{StaticResource Item_Template}">
-
-                        <MenuItem.Icon>
-
-                            <Image Source="Assets/img_input.png"
-                                   Stretch="None" />
-
-                        </MenuItem.Icon>
-
-                    </MenuItem>
-
-                    <!--// Events Submenu - Event Help //-->
-
-                    <MenuItem Header="Event Help"
-                              Template="{StaticResource Item_Template}">
-
-                        <MenuItem.Icon>
-
-                            <Image Source="Assets/img_input.png"
-                                   Stretch="None" />
-
-                        </MenuItem.Icon>
-
-                    </MenuItem>
-
                 </MenuItem>
+
 
                 <!--// Main Menu - Search //-->
 
