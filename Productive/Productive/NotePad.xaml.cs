@@ -41,6 +41,8 @@ namespace Productive
             noteTextBox.HorizontalAlignment = HorizontalAlignment.Center;
             noteTextBox.VerticalAlignment = VerticalAlignment.Center;
             noteTextBox.FontSize = 20;
+            noteTextBox.TextWrapping = TextWrapping.Wrap;
+            noteTextBox.AcceptsReturn = false;
 
             notes.Add(noteTextBox);
 
