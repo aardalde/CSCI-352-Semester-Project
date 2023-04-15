@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -19,9 +20,49 @@ namespace Productive
     /// </summary>
     public partial class AddEventSubWindow : Window
     {
+        private string EventName;
+        private string Month;
+        private int Day;
+        private string Hour;
+        private string Meridiem;
+
+        List<TextBox> eventList = new List<TextBox>();
+
         public AddEventSubWindow()
         {
             InitializeComponent();
+        }
+
+        private void setEvent()
+        {
+            EventsSubWindow events = new EventsSubWindow();
+            MainWindow mainWindow= new MainWindow();
+
+            EventName = EventNameBar.Text;
+            Month = MonthBar.Text;
+            Day = Int32.Parse(DayBar.Text);
+            Hour = HourBar.Text;
+            Meridiem = MeridiemBar.Text;
+
+            TextBox eventBox = new TextBox();
+            eventBox.TextAlignment = TextAlignment.Center;
+            eventBox.Text = "Event:" + "\n" + EventName + "\n" + Month + " " + Day + mainWindow.getSuffix(Day.ToString()) + "\n" + Hour + " " + Meridiem;
+            eventBox.Width = 500;
+            eventBox.Height = 175;
+            eventBox.HorizontalAlignment = HorizontalAlignment.Center;
+            eventBox.VerticalAlignment = VerticalAlignment.Center;
+            eventBox.FontSize = 28;
+            eventBox.FontWeight = FontWeights.Bold;
+
+            eventList.Add(eventBox);
+
+            foreach(TextBox box in eventList)
+             {
+                 events.EventsPanel.Children.Add(box);
+             }
+
+             this.Close();
+             events.Show();
         }
 
         private void TextBar_LostFocus(object sender, RoutedEventArgs e)
@@ -44,8 +85,37 @@ namespace Productive
             }
         }
 
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void Cancel_Button_Click(object sender, RoutedEventArgs e)
         {
+            this.Close();
+        }
+
+        private void Confirm_Button_Click(object sender, RoutedEventArgs e)
+        {
+            if(EventNameBar.Text.Length == 0)
+            {
+                MessageBox.Show("Please enter an event name.", "Error", MessageBoxButton.OK);
+            }
+
+            if (MonthBar.Text == "Month")
+            {
+                MessageBox.Show("Please choose a valid month", "Error", MessageBoxButton.OK);
+            }
+
+            if (DayBar.Text == "Day")
+            {
+                MessageBox.Show("Please choose a valid day", "Error", MessageBoxButton.OK);
+            }
+
+            if (HourBar.Text == "Hour")
+            {
+                MessageBox.Show("Please choose a valid hour.", "Error", MessageBoxButton.OK);
+            }
+
+            else
+            {
+                setEvent();
+            }
 
         }
     }
