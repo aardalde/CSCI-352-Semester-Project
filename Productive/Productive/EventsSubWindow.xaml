@@ -164,34 +164,6 @@
 
                     </MenuItem.Icon>
 
-                    <!--// Notifications Submenu - Enable/Disable Notifications //-->
-
-                    <MenuItem Header="Enable/Disable Notifications"
-                              Template="{StaticResource Item_Template}">
-
-                        <MenuItem.Icon>
-
-                            <Image Source="Assets/img_setting.png"
-                                   Stretch="None" />
-
-                        </MenuItem.Icon>
-
-                    </MenuItem>
-
-                    <!--// Notifications Submenu - Notification Settings //-->
-
-                    <MenuItem Header="Notification Settings"
-                              Template="{StaticResource Item_Template}">
-
-                        <MenuItem.Icon>
-
-                            <Image Source="Assets/img_setting.png"
-                                   Stretch="None" />
-
-                        </MenuItem.Icon>
-
-                    </MenuItem>
-
                 </MenuItem>
 
                 <!--// Main Menu - About //-->
