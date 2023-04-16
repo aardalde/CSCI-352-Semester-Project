@@ -155,7 +155,7 @@
                 <!--// Main Menu - Notifications //-->
 
                 <MenuItem Header="Notifications"
-                      Template="{StaticResource Menu_SubMenu_Template}">
+                      Template="{StaticResource Menu_SubMenu_Template}" Click="MenuItem_Click_3">
 
                     <MenuItem.Icon>
 
@@ -199,10 +199,7 @@
         </StackPanel>
 
         <!--// Maximize / Minimize App //-->
-
-        <Button x:Name="MaxBtn"
-                Style="{StaticResource MaxBtnStyle}" Click="MaxBtn_Click" Margin="0,10,15,0" />
-        <ScrollViewer x:Name="EventsViewer" HorizontalAlignment="Left" Height="614" Margin="235,50,0,0" VerticalAlignment="Top" Width="665">
+        <ScrollViewer x:Name="EventsViewer" HorizontalAlignment="Left" Height="662" Margin="230,0,0,0" VerticalAlignment="Top" Width="670">
             <StackPanel x:Name="EventsPanel" Height="615" Width="644"/>
         </ScrollViewer>
 

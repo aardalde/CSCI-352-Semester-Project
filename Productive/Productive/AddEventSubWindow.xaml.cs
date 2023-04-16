@@ -20,13 +20,13 @@ namespace Productive
     /// </summary>
     public partial class AddEventSubWindow : Window
     {
-        private string EventName;
+        public string EventName;
         private string Month;
         private int Day;
         private string Hour;
         private string Meridiem;
 
-        List<TextBox> eventList = new List<TextBox>();
+       public List<TextBox> eventList = new List<TextBox>();
 
         public AddEventSubWindow()
         {
@@ -60,6 +60,8 @@ namespace Productive
              {
                  events.EventsPanel.Children.Add(box);
              }
+
+            
 
              this.Close();
              events.Show();

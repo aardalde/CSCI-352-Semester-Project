@@ -22,11 +22,12 @@ namespace Productive
     /// </summary>
     public partial class MainWindow : Window
     {
+        AddEventSubWindow add = new AddEventSubWindow();
         private DispatcherTimer countdown;
-        private TimeSpan time = TimeSpan.FromSeconds(45);
-        private double totalTasks = 5;
-        private double tasksOnTime = 3; //TODO: CHANGE IMPLEMENTAION
-        private string eventName = "Event 1";
+        private TimeSpan time;
+        private double totalTasks = 1;
+        private double tasksOnTime = 0; //TODO: CHANGE IMPLEMENTAION
+        private string eventName;
 
         public MainWindow()
         {
@@ -38,6 +39,10 @@ namespace Productive
             ProgBar.Value = ((tasksOnTime / totalTasks) * 100);
         }
 
+        public void updateEvent() { 
+            eventName= add.EventName;
+        }
+
         public void CountdownEvent()
         {
             countdown = new DispatcherTimer(new TimeSpan(0, 0, 1), DispatcherPriority.Normal, delegate
@@ -46,7 +51,7 @@ namespace Productive
                 if (time == TimeSpan.Zero)
                 {
                     countdown.Stop();
-                    tasksOnTime--;
+                    //tasksOnTime--;
                     UpdateProductivity();
                 }
                 time = time.Add(TimeSpan.FromSeconds(-1)); //Countdown timer implementation -> https://stackoverflow.com/questions/16748371/how-to-make-a-wpf-countdown-timer
