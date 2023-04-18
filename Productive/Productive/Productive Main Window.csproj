@@ -77,11 +77,6 @@
       <DependentUpon>AddEventSubWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="DatabaseManager.cs" />
-    <Compile Include="ProductiveDatabaseDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ProductiveDatabaseDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="UserLogin.xaml.cs">
       <DependentUpon>UserLogin.xaml</DependentUpon>
     </Compile>
@@ -148,17 +143,6 @@
     <Resource Include="Fonts\Harlow Solid Italic Italic.ttf" />
     <Resource Include="Fonts\Sitka-Small.ttf" />
     <None Include="app.config" />
-    <None Include="ProductiveDatabaseDataSet.xsc">
-      <DependentUpon>ProductiveDatabaseDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="ProductiveDatabaseDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ProductiveDatabaseDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ProductiveDatabaseDataSet.xss">
-      <DependentUpon>ProductiveDatabaseDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -193,15 +177,6 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="ProductiveDatabase.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="ProductiveDatabase_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>ProductiveDatabase.mdf</DependentUpon>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="SQL Files\" />

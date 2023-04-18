@@ -28,10 +28,10 @@
                 Foreground="#FFFEC63D"  
                 FontWeight="Bold" 
                 FontFamily="Fonts/#Segoe UI Bold"
-                HorizontalAlignment="Center" 
-                Margin="0,200,0,0"
+                HorizontalAlignment="Left" 
+                Margin="100,177,0,0"
                 Height="30"
-                Width="200"
+                Width="60"
                 Background="#FF2E333A" 
                 BorderBrush="#FF2E333A"
                 VerticalAlignment="Top"/>
@@ -67,7 +67,8 @@
                 HorizontalAlignment="Left" 
                 Margin="3,142,0,0" 
                 Height="30"
-                VerticalAlignment="Top" RenderTransformOrigin="0.187,0.201"/>
+                VerticalAlignment="Top" 
+                RenderTransformOrigin="0.187,0.201"/>
 
         <TextBox HorizontalAlignment="Center" 
                  Margin="0,142,0,0" 
@@ -76,6 +77,19 @@
                  Height="30"
                  VerticalAlignment="Top" 
                  Width="200"/>
+        
+        <Button Content="Create Account" 
+                FontSize="16" 
+                Foreground="#FFFEC63D"  
+                FontWeight="Bold" 
+                FontFamily="Fonts/#Segoe UI Bold"
+                HorizontalAlignment="Left" 
+                Margin="165,177,0,0"
+                Height="30"
+                Width="135"
+                Background="#FF2E333A" 
+                BorderBrush="#FF2E333A"
+                VerticalAlignment="Top"/>
 
     </Grid>
 
