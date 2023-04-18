@@ -12,15 +12,14 @@ namespace Productive
     {
         public static bool InsertUser(string username, string password)
         {
-            using (SqlConnection connection = new SqlConnection(@"Data Source = (localdb)\MSSQLLocalDB; Integrated Security = True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Integrated Security=True"))
             {
                 connection.Open();
-                SqlCommand command = new SqlCommand("INSERT INTO Users (ID, Username, Password) VALUES (@id, @username, @password)", connection);
+                SqlCommand command = new SqlCommand("INSERT INTO Users (Username, Password) VALUES (@username, @password)", connection);
                 command.Parameters.AddWithValue("@username", username);
                 command.Parameters.AddWithValue("@password", password);
-                command.Parameters.AddWithValue("@id", Guid.NewGuid().ToString());
-                int userId = Convert.ToInt32(command.ExecuteScalar());
-                return userId > 0;
+                int rowsAffected = command.ExecuteNonQuery();
+                return rowsAffected > 0;
             }
         }
     }
