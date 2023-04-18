@@ -39,9 +39,9 @@ namespace Productive
             ProgBar.Value = ((tasksOnTime / totalTasks) * 100);
         }
 
-        public void updateEvent() { 
+       /* public void updateEvent() { 
             eventName= add.EventName;
-        }
+        }*/
 
         public void CountdownEvent()
         {
