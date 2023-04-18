@@ -77,17 +77,11 @@
       <DependentUpon>AddEventSubWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="DatabaseManager.cs" />
-<<<<<<< HEAD
-    <Compile Include="NotificationsWindow.xaml.cs">
-      <DependentUpon>NotificationsWindow.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ProductiveDatabaseDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ProductiveDatabaseDataSet.xsd</DependentUpon>
     </Compile>
-=======
->>>>>>> ccbda22ea849112fa29ec82fd49f23c2fc47a680
     <Compile Include="UserLogin.xaml.cs">
       <DependentUpon>UserLogin.xaml</DependentUpon>
     </Compile>
