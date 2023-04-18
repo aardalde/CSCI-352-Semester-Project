@@ -27,6 +27,17 @@ namespace Productive
         {
             string username = UsernameTextBox.Text;
             string password = PasswordTextBox.Text;
+
+            DatabaseManager.InsertUser(username, password);
+
+            if (DatabaseManager.InsertUser(username, password))
+            {
+                Console.WriteLine("User created successfully");
+            }
+            else
+            {
+                Console.WriteLine("User creation failed");
+            }
         }
     }
 }
