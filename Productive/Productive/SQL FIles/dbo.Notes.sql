@@ -1,0 +1,9 @@
+﻿CREATE TABLE [dbo].[Notes]
+(
+	[Id] INT NOT NULL PRIMARY KEY,
+    UserId INTEGER NOT NULL,
+    NoteTitle VARCHAR(50) NOT NULL,
+    NoteContent TEXT,
+    CreatedAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (UserId) REFERENCES Users (Id)
+)

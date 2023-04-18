@@ -1,0 +1,9 @@
+﻿CREATE TABLE [dbo].[Events]
+(
+	[Id] INT NOT NULL PRIMARY KEY,
+    UserId INTEGER NOT NULL,
+    EventDescription VARCHAR(255) NOT NULL,
+    TimeDateDue DATETIME NOT NULL,
+    FOREIGN KEY (UserId) REFERENCES Users (Id)
+)
+
