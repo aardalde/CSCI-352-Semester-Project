@@ -77,6 +77,7 @@
       <DependentUpon>AddEventSubWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="DatabaseManager.cs" />
+<<<<<<< HEAD
     <Compile Include="NotificationsWindow.xaml.cs">
       <DependentUpon>NotificationsWindow.xaml</DependentUpon>
     </Compile>
@@ -85,6 +86,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ProductiveDatabaseDataSet.xsd</DependentUpon>
     </Compile>
+=======
+>>>>>>> ccbda22ea849112fa29ec82fd49f23c2fc47a680
     <Compile Include="UserLogin.xaml.cs">
       <DependentUpon>UserLogin.xaml</DependentUpon>
     </Compile>
@@ -155,17 +158,6 @@
     <Resource Include="Fonts\Harlow Solid Italic Italic.ttf" />
     <Resource Include="Fonts\Sitka-Small.ttf" />
     <None Include="app.config" />
-    <None Include="ProductiveDatabaseDataSet.xsc">
-      <DependentUpon>ProductiveDatabaseDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="ProductiveDatabaseDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ProductiveDatabaseDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ProductiveDatabaseDataSet.xss">
-      <DependentUpon>ProductiveDatabaseDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -201,17 +193,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="ProductiveDatabase.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="ProductiveDatabase_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>ProductiveDatabase.mdf</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="SQL Files\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
