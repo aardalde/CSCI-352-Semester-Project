@@ -5,7 +5,6 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Productive"
         mc:Ignorable="d"
-        WindowStyle="None"
         Title="MainWindow" Height="628" Width="1376" Background="#FF23262B">
     <Grid HorizontalAlignment="Center" Width="414">
         <Grid.RowDefinitions>
