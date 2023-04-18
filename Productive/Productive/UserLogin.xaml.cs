@@ -23,5 +23,10 @@ namespace Productive
         {
             InitializeComponent();
         }
+        private void CreateAccountButton_Click(object sender, RoutedEventArgs e)
+        {
+            string username = UsernameTextBox.Text;
+            string password = PasswordTextBox.Text;
+        }
     }
 }

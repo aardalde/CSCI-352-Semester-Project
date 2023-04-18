@@ -21,7 +21,7 @@ namespace Productive
     {
         AddEventSubWindow addEvent = new AddEventSubWindow();
         MainWindow main = new MainWindow();
-        NotificationsWindow notifications = new NotificationsWindow();
+        //NotificationsWindow notifications = new NotificationsWindow();
 
         public EventsSubWindow()
         {
@@ -67,7 +67,7 @@ namespace Productive
 
         private void MenuItem_Click_3(object sender, RoutedEventArgs e)
         {
-            notifications.Show();
+            //notifications.Show();
         }
     }
 }

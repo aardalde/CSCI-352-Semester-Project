@@ -49,7 +49,8 @@
                 VerticalAlignment="Top"/>
 
 
-        <TextBox HorizontalAlignment="Center" 
+        <TextBox x:Name="UsernameTextBox" 
+                 HorizontalAlignment="Center" 
                  Margin="0,86,0,0" 
                  TextWrapping="Wrap" 
                  Text="" 
@@ -70,7 +71,8 @@
                 VerticalAlignment="Top" 
                 RenderTransformOrigin="0.187,0.201"/>
 
-        <TextBox HorizontalAlignment="Center" 
+        <TextBox x:Name="PasswordTextBox" 
+                 HorizontalAlignment="Center" 
                  Margin="0,142,0,0" 
                  TextWrapping="Wrap" 
                  Text="" 
@@ -78,7 +80,7 @@
                  VerticalAlignment="Top" 
                  Width="200"/>
         
-        <Button Content="Create Account" 
+        <Button x:Name="CreateAccountButton" Content="Create Account" 
                 FontSize="16" 
                 Foreground="#FFFEC63D"  
                 FontWeight="Bold" 
@@ -89,7 +91,7 @@
                 Width="135"
                 Background="#FF2E333A" 
                 BorderBrush="#FF2E333A"
-                VerticalAlignment="Top"/>
+                VerticalAlignment="Top" Click="CreateAccountButton_Click"/>
 
     </Grid>
 

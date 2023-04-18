@@ -199,6 +199,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="dbo.Alerts.sql" />
+    <Content Include="dbo.Events.sql" />
+    <Content Include="dbo.Notes.sql" />
+    <Content Include="dbo.Users.sql" />
     <Content Include="PPMDatabase.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -207,8 +211,6 @@
       <DependentUpon>PPMDatabase.mdf</DependentUpon>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="SQL FIles\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
