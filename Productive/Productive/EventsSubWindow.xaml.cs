@@ -69,6 +69,11 @@ namespace Productive
         {
             //notifications.Show();
         }
+
+        private void MenuItem_Click_4(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
 
