@@ -54,7 +54,7 @@
                          ValueChanged="ProgBar_ValueChanged"/>
 
             <Button x:Name="User_Login"
-                    Content="User1" 
+                    Content="Dynamic text?"
                     HorizontalAlignment="Left" 
                     Height="28" 
                     Margin="1270,15,0,0" 

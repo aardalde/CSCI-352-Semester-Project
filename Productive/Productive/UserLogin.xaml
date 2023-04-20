@@ -23,7 +23,8 @@
                    HorizontalAlignment="Center" 
                    Width="394"/>
 
-        <Button Content="LOGIN" 
+        <Button x:Name="LoginButton" 
+                Content="LOGIN" 
                 FontSize="16" 
                 Foreground="#FFFEC63D"  
                 FontWeight="Bold" 
@@ -34,7 +35,8 @@
                 Width="60"
                 Background="#FF2E333A" 
                 BorderBrush="#FF2E333A"
-                VerticalAlignment="Top"/>
+                VerticalAlignment="Top" 
+                Click="LoginButton_Click"/>
 
         <Button Content="Username:" 
                 FontSize="16" 
@@ -50,10 +52,13 @@
 
 
         <TextBox x:Name="UsernameTextBox" 
-                 HorizontalAlignment="Center" 
+                 TabIndex="0"
+                 TextAlignment="Left" 
+                 HorizontalContentAlignment="Center" 
                  Margin="0,86,0,0" 
-                 TextWrapping="Wrap" 
-                 Text="" 
+                 TextWrapping="NoWrap" 
+                 Text=""
+                 FontSize="16"
                  VerticalAlignment="Top"
                  Height="30"
                  Width="200"/>
@@ -71,10 +76,13 @@
                 VerticalAlignment="Top" 
                 RenderTransformOrigin="0.187,0.201"/>
 
-        <TextBox x:Name="PasswordTextBox" 
-                 HorizontalAlignment="Center" 
+        <TextBox x:Name="PasswordTextBox"
+                 TabIndex="1"
+                 TextAlignment="Left" 
+                 HorizontalContentAlignment="Center"
                  Margin="0,142,0,0" 
-                 TextWrapping="Wrap" 
+                 TextWrapping="NoWrap" 
+                 FontSize="16"
                  Text="" 
                  Height="30"
                  VerticalAlignment="Top" 
