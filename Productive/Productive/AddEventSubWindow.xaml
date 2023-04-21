@@ -13,7 +13,19 @@
         <Label Content="Add Event" HorizontalAlignment="Center" Height="32" VerticalAlignment="Top" Width="144" FontFamily="Sitka Small Semibold" FontSize="24" Foreground="#FFFEC63D" Margin="0,8,0,0"/>
         <Grid x:Name="SubGrid" HorizontalAlignment="Center" Height="444" Margin="0,40,0,0" VerticalAlignment="Top" Width="500" Background="#FF2E333A">
             <Label Content="Event Name:" HorizontalAlignment="Center" Height="36" Margin="0,10,0,0" VerticalAlignment="Top" Width="128" FontWeight="Bold" Foreground="#FFFBFBFB" FontSize="20"/>
-            <TextBox x:Name="EventNameBar" HorizontalAlignment="Center" Height="25" Margin="0,51,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="279" Background="Gray" BorderBrush="Gray" Foreground="#FFFBFBFB" 
+            
+            <TextBox x:Name="EventNameBar" 
+                     HorizontalAlignment="Center" 
+                     Height="25" 
+                     Margin="0,51,0,0" 
+                     TextWrapping="Wrap" 
+                     Text="" 
+                     VerticalAlignment="Top" 
+                     Width="279" 
+                     Background="Gray" 
+                     BorderBrush="Gray" 
+                     Foreground="#FFFBFBFB" 
+                     
              LostFocus="TextBar_LostFocus" PreviewKeyDown="TextBar_PreviewKeyDown" PreviewTextInput="TextBar_PreviewTextInput" FontWeight="Bold" FontSize="14"/>
             <Label Content="Month and Day:" HorizontalAlignment="Center" Height="41" Margin="0,91,0,0" VerticalAlignment="Top" Width="164" FontWeight="Bold" Foreground="#FFFBFBFB" FontSize="20"/>
             

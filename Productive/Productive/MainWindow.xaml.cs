@@ -89,7 +89,6 @@ namespace Productive
         {
             EventsSubWindow events = new EventsSubWindow();
             events.Show();
-            Close();
         }
 
         private void ImportButton_Click(object sender, RoutedEventArgs e)
