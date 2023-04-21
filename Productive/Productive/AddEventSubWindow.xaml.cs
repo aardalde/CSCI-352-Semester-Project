@@ -60,9 +60,6 @@ namespace Productive
              {
                  events.EventsPanel.Children.Add(box);
              }
-
-            
-
              this.Close();
              events.Show();
         }

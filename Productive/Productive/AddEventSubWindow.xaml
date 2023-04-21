@@ -12,24 +12,37 @@
         <Line X1="0" Y1="40" X2="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Window}}" Y2="40" Stroke="#FFFEC63D" StrokeThickness="3"/>
         <Label Content="Add Event" HorizontalAlignment="Center" Height="32" VerticalAlignment="Top" Width="144" FontFamily="Sitka Small Semibold" FontSize="24" Foreground="#FFFEC63D" Margin="0,8,0,0"/>
         <Grid x:Name="SubGrid" HorizontalAlignment="Center" Height="444" Margin="0,40,0,0" VerticalAlignment="Top" Width="500" Background="#FF2E333A">
-            <Label Content="Event Name:" HorizontalAlignment="Center" Height="36" Margin="0,10,0,0" VerticalAlignment="Top" Width="128" FontWeight="Bold" Foreground="#FFFBFBFB" FontSize="20"/>
-            
+            <Label Content="Event Name:" HorizontalAlignment="Left" Height="36" Margin="184,10,0,0" VerticalAlignment="Top" Width="128" FontWeight="Bold" Foreground="#FFFBFBFB" FontSize="20"/>
+
             <TextBox x:Name="EventNameBar" 
+                     TabIndex="0"
                      HorizontalAlignment="Center" 
                      Height="25" 
                      Margin="0,51,0,0" 
-                     TextWrapping="Wrap" 
+                     TextWrapping="NoWrap" 
                      Text="" 
                      VerticalAlignment="Top" 
                      Width="279" 
-                     Background="Gray" 
-                     BorderBrush="Gray" 
-                     Foreground="#FFFBFBFB" 
-                     
-             LostFocus="TextBar_LostFocus" PreviewKeyDown="TextBar_PreviewKeyDown" PreviewTextInput="TextBar_PreviewTextInput" FontWeight="Bold" FontSize="14"/>
-            <Label Content="Month and Day:" HorizontalAlignment="Center" Height="41" Margin="0,91,0,0" VerticalAlignment="Top" Width="164" FontWeight="Bold" Foreground="#FFFBFBFB" FontSize="20"/>
-            
-            <ComboBox x:Name="MonthBar" HorizontalAlignment="Left" Height="21" Margin="173,137,0,0" VerticalAlignment="Top" Width="77" FontSize="10" FontWeight="Bold">
+                     LostFocus="TextBar_LostFocus" 
+                     PreviewKeyDown="TextBar_PreviewKeyDown" 
+                     PreviewTextInput="TextBar_PreviewTextInput" 
+                     FontWeight="Bold" 
+                     FontSize="14"/>
+
+            <TextBox x:Name="EventDescriptionBar"
+                     TabIndex="1"
+                     HorizontalAlignment="Left"
+                     VerticalAlignment="Top"
+                     Margin="48,122,0,0"
+                     Width="400"
+                     Height="100"
+                     TextWrapping="Wrap"
+                     FontWeight="Bold"
+                     FontSize="14"/>
+
+            <Label Content="Event Description:" HorizontalAlignment="Left" Height="41" Margin="148,81,0,0" VerticalAlignment="Top" Width="200" FontWeight="Bold" Foreground="#FFFBFBFB" FontSize="20"/>
+
+            <ComboBox x:Name="MonthBar" TabIndex="3" HorizontalAlignment="Left" Height="20" Margin="130,265,0,0" VerticalAlignment="Top" Width="77" FontSize="10" FontWeight="Bold">
                 <ComboBoxItem IsSelected="True">Month</ComboBoxItem>
                 <ComboBoxItem>January</ComboBoxItem>
                 <ComboBoxItem>February</ComboBoxItem>
@@ -45,7 +58,7 @@
                 <ComboBoxItem>December</ComboBoxItem>
             </ComboBox>
 
-            <ComboBox x:Name="DayBar" HorizontalAlignment="Left" Height="21" Margin="255,137,0,0" VerticalAlignment="Top" Width="77" FontSize="10" FontWeight="Bold">
+            <ComboBox x:Name="DayBar" TabIndex="2" HorizontalAlignment="Left" Height="20" Margin="48,265,0,0" VerticalAlignment="Top" Width="77" FontSize="10" FontWeight="Bold">
                 <ComboBoxItem IsSelected="True">Day</ComboBoxItem>
                 <ComboBoxItem>1</ComboBoxItem>
                 <ComboBoxItem>2</ComboBoxItem>
@@ -80,8 +93,8 @@
                 <ComboBoxItem>31</ComboBoxItem>
             </ComboBox>
 
-            <Label Content="Time:" HorizontalAlignment="Center" Height="38" Margin="0,180,0,0" VerticalAlignment="Top" Width="64" FontWeight="Bold" Foreground="#FFFBFBFB" FontSize="20"/>
-            <ComboBox x:Name="HourBar" HorizontalAlignment="Left" Height="21" Margin="173,218,0,0" VerticalAlignment="Top" Width="77" FontWeight="Bold" FontSize="11">
+            <Label Content="Time:" HorizontalAlignment="Left" Height="38" Margin="332,227,0,0" VerticalAlignment="Top" Width="64" FontWeight="Bold" Foreground="#FFFBFBFB" FontSize="20"/>
+            <ComboBox x:Name="HourBar" TabIndex="4" HorizontalAlignment="Left" Height="20" Margin="293,265,0,0" VerticalAlignment="Top" Width="77" FontWeight="Bold" FontSize="10">
                 <ComboBoxItem IsSelected="True" Content="Hour"/>
                 <ComboBoxItem Content="1:00"/>
                 <ComboBoxItem Content="2:00"/>
@@ -96,27 +109,28 @@
                 <ComboBoxItem Content="11:00"/>
                 <ComboBoxItem Content="12:00"/>
             </ComboBox>
-            
-            <ComboBox x:Name="MeridiemBar" HorizontalAlignment="Left" Height="21" Margin="255,218,0,0" VerticalAlignment="Top" Width="77" FontSize="10" FontWeight="Bold">
+
+            <ComboBox x:Name="MeridiemBar" TabIndex="5" HorizontalAlignment="Left" Height="20" Margin="375,265,0,0" VerticalAlignment="Top" Width="77" FontSize="10" FontWeight="Bold">
                 <ComboBoxItem IsSelected="True" Content="AM"/>
                 <ComboBoxItem Content="PM"/>
             </ComboBox>
-            
-            <Button x:Name="Confirm_Button" Content="Confirm" HorizontalAlignment="Left" Height="31" Margin="10,313,0,0" VerticalAlignment="Top" Width="76" Background="#FF23262B" FontWeight="Bold" Foreground="#FF27D229" BorderBrush="Black" Click="Confirm_Button_Click">
+
+            <Button x:Name="Confirm_Button" Content="Confirm" HorizontalAlignment="Left" Height="31" Margin="168,315,0,0" VerticalAlignment="Top" Width="76" Background="#FF23262B" FontWeight="Bold" Foreground="#FF27D229" BorderBrush="Black" Click="Confirm_Button_Click">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="15"/>
                     </Style>
                 </Button.Resources>
             </Button>
-            
-            <Button x:Name="Cancel_Button" Content="Cancel" HorizontalAlignment="Left" Height="31" Margin="414,313,0,0" VerticalAlignment="Top" Width="76" Background="#FF23262B" FontWeight="Bold" Foreground="#FFD22727" BorderBrush="Black" Click="Cancel_Button_Click">
+
+            <Button x:Name="Cancel_Button" Content="Cancel" HorizontalAlignment="Left" Height="31" Margin="256,315,0,0" VerticalAlignment="Top" Width="76" Background="#FF23262B" FontWeight="Bold" Foreground="#FFD22727" BorderBrush="Black" Click="Cancel_Button_Click">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="15"/>
                     </Style>
                 </Button.Resources>
             </Button>
+            <Label Content="Date:" HorizontalAlignment="Left" Height="38" Margin="86,227,0,0" VerticalAlignment="Top" Width="64" FontWeight="Bold" Foreground="#FFFBFBFB" FontSize="20"/>
         </Grid>
 
     </Grid>
