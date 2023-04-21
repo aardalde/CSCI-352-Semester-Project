@@ -120,5 +120,10 @@ namespace Productive
             }
 
         }
+
+        private void MonthBar_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
