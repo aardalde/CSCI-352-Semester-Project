@@ -48,7 +48,7 @@ namespace Productive
             string username = UsernameTextBox.Text;
             string password = PasswordTextBox.Text;
 
-            using (SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Aaron\Source\Repos\aardalde\CSCI-352-Semester-Project\Productive\Productive\PPMDatabase.mdf;Integrated Security=True;Connect Timeout=30"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\PPMDatabase.mdf;Integrated Security=True;Connect Timeout=30"))
             {
                 connection.Open();
 
