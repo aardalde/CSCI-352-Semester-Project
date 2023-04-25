@@ -203,11 +203,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="dbo.Users.sql" />
-    <Content Include="PPMDatabase.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="PPMDatabase.mdf" />
     <Content Include="PPMDatabase_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>PPMDatabase.mdf</DependentUpon>
     </Content>
   </ItemGroup>

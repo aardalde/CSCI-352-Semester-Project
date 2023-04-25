@@ -114,10 +114,17 @@ namespace Productive
             UpdateProductivity();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void User_Logout_Click(object sender, RoutedEventArgs e)
         {
-            UserLogin userLogin = new UserLogin();
-            userLogin.Show();
+            MessageBoxResult result = MessageBox.Show("Do you want to log out?", "Log out", MessageBoxButton.YesNo);
+            if (result == MessageBoxResult.Yes)
+            {
+                Application.Current.Shutdown();
+            }
+            else
+            {
+                // Returns to user's current application state
+            }
         }
     }
 }
