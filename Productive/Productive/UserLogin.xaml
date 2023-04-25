@@ -76,18 +76,15 @@
                 VerticalAlignment="Top" 
                 RenderTransformOrigin="0.187,0.201"/>
 
-        <TextBox x:Name="PasswordTextBox"
-                 TabIndex="1"
-                 TextAlignment="Left" 
-                 HorizontalContentAlignment="Center"
-                 Margin="0,142,0,0" 
-                 TextWrapping="NoWrap" 
-                 FontSize="16"
-                 Text="" 
-                 Height="30"
-                 VerticalAlignment="Top" 
-                 Width="200"/>
-        
+        <PasswordBox x:Name="PasswordTextBox"
+                     TabIndex="1"
+                     HorizontalContentAlignment="Left"
+                     Margin="0,142,0,0" 
+                     FontSize="16"
+                     Height="30"
+                     VerticalAlignment="Top" 
+                     Width="200"/>
+
         <Button x:Name="CreateAccountButton" Content="Create Account" 
                 FontSize="16" 
                 Foreground="#FFFEC63D"  
