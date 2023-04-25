@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:Productive"
         mc:Ignorable="d"
         WindowStyle="SingleBorderWindow"
-        Title="MainWindow" Height="628" Width="1376" Background="#FF23262B">
-    <Grid HorizontalAlignment="Center" Width="414">
+        Title="MainWindow" Height="628" Width="1376" Background="#FF23262B" WindowStartupLocation="CenterScreen">
+    <Grid HorizontalAlignment="Center" Width="414" >
         <Grid.RowDefinitions>
             <RowDefinition Height="49*"/>
             <RowDefinition Height="365*"/>

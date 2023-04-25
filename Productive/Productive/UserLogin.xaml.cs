@@ -30,6 +30,12 @@ namespace Productive
             string username = UsernameTextBox.Text;
             string password = PasswordTextBox.Text;
 
+            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
+            {
+                MessageBox.Show("Please fill in all fields");
+                return;
+            }
+
             if (DatabaseManager.InsertUser(username, password))
             {
                 MessageBox.Show("Account successfully created");
