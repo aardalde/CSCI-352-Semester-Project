@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Productive"
         mc:Ignorable="d"
-        WindowStyle="None"
-        Title="MainWindow" Height="628" Width="1376" Background="#FF23262B">
-    <Grid HorizontalAlignment="Center" Width="414">
+        WindowStyle="SingleBorderWindow"
+        Title="MainWindow" Height="628" Width="1376" Background="#FF23262B" WindowStartupLocation="CenterScreen">
+    <Grid HorizontalAlignment="Center" Width="414" >
         <Grid.RowDefinitions>
             <RowDefinition Height="49*"/>
             <RowDefinition Height="365*"/>
@@ -54,7 +54,7 @@
                          Foreground="#FFFEC63D" 
                          ValueChanged="ProgBar_ValueChanged"/>
 
-            <Button x:Name="User_Login"
+            <Button x:Name="User_Logout"
                     Content="Dynamic text?"
                     HorizontalAlignment="Left" 
                     Height="28" 
@@ -66,7 +66,7 @@
                     BorderBrush="#FF2E333A"
                     Width="64" 
                     Foreground="#FFFEC63D" 
-                    FontSize="14" Click="Button_Click"/>
+                    FontSize="14" Click="User_Logout_Click"/>
 
             <Button x:Name="Note_Button" 
                     Content="+" 

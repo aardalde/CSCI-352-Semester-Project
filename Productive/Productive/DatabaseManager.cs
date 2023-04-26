@@ -14,7 +14,13 @@ namespace Productive
     {
         public static bool InsertUser(string username, string password)
         {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\PPMDatabase.mdf;Integrated Security=True;Connect Timeout=30"))
+            // Check for null inputs
+            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
+            {
+                return false;
+            }
+
+            using (SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Aaron\Source\Repos\aardalde\CSCI-352-Semester-Project\Productive\Productive\PPMUserDatabase.mdf;Integrated Security=True"))
             {
                 connection.Open();
 
@@ -39,6 +45,7 @@ namespace Productive
                 }
             }
         }
+
 
         public static bool CheckUserExists(SqlConnection connection, string username, string password)
         {

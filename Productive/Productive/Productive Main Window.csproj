@@ -80,10 +80,10 @@
     <Compile Include="NotificationsWindow.xaml.cs">
       <DependentUpon>NotificationsWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PPMDatabaseDataSet.Designer.cs">
+    <Compile Include="PPMUserDatabaseDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>PPMDatabaseDataSet.xsd</DependentUpon>
+      <DependentUpon>PPMUserDatabaseDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="UserLogin.xaml.cs">
       <DependentUpon>UserLogin.xaml</DependentUpon>
@@ -155,16 +155,16 @@
     <Resource Include="Fonts\Harlow Solid Italic Italic.ttf" />
     <Resource Include="Fonts\Sitka-Small.ttf" />
     <None Include="app.config" />
-    <None Include="PPMDatabaseDataSet.xsc">
-      <DependentUpon>PPMDatabaseDataSet.xsd</DependentUpon>
+    <None Include="PPMUserDatabaseDataSet.xsc">
+      <DependentUpon>PPMUserDatabaseDataSet.xsd</DependentUpon>
     </None>
-    <None Include="PPMDatabaseDataSet.xsd">
+    <None Include="PPMUserDatabaseDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>PPMDatabaseDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>PPMUserDatabaseDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="PPMDatabaseDataSet.xss">
-      <DependentUpon>PPMDatabaseDataSet.xsd</DependentUpon>
+    <None Include="PPMUserDatabaseDataSet.xss">
+      <DependentUpon>PPMUserDatabaseDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -202,15 +202,13 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="dbo.Users.sql" />
-    <Content Include="PPMDatabase.mdf">
+    <Content Include="PPMUserDatabase.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="PPMDatabase_log.ldf">
+    <Content Include="PPMUserDatabase_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>PPMDatabase.mdf</DependentUpon>
+      <DependentUpon>PPMUserDatabase.mdf</DependentUpon>
     </Content>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
