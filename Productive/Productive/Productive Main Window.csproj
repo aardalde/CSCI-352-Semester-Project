@@ -203,10 +203,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="dbo.Users.sql" />
-    <Content Include="PPMDatabase.mdf" />
-    <Content Include="PPMDatabase_log.ldf">
-      <DependentUpon>PPMDatabase.mdf</DependentUpon>
-    </Content>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
