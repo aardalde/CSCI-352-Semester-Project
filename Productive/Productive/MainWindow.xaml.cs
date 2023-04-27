@@ -22,36 +22,38 @@ namespace Productive
     /// </summary>
     public partial class MainWindow : Window
     {
-        AddEventSubWindow add = new AddEventSubWindow();
         private DispatcherTimer countdown;
-        private TimeSpan time;
-        private double totalTasks = 1;
-        private double tasksOnTime = 0; //TODO: CHANGE IMPLEMENTAION
+        private TimeSpan time = TimeSpan.FromSeconds(647532);
+        private double totalTasks = 4;
+        private double tasksOnTime = 3; //TODO: CHANGE IMPLEMENTAION
         private string eventName;
+        private string day;
+        private string month;
+        private string hour;
+        private string meridian;
 
         public MainWindow()
         {
             InitializeComponent();
-            CountdownEvent();
             EventsCompletedBlock.Text = "Events Completed this Month (" + DateTime.Now.ToString("MMMM") + "):\n" + totalTasks.ToString();
             TasksCompletedBlock.Text = "Tasks Completed on Time: \n" + tasksOnTime;
             ProdRatioBlock.Text = "\n\nProductivity Ratio: " + ((tasksOnTime / totalTasks) * 100) + "%";
             ProgBar.Value = ((tasksOnTime / totalTasks) * 100);
         }
 
-        public void updateEvent() { 
-            eventName= add.EventName;
-        }
+        public void updateEvent() {
+            eventName = "My Event";
+            month = "May ";
+            day = "4";
+            hour = "12:00";
+            meridian = "PM";
 
-        public void CountdownEvent()
-        {
             countdown = new DispatcherTimer(new TimeSpan(0, 0, 1), DispatcherPriority.Normal, delegate
             {
-                NextEventBlock.Text = eventName + "\nDue:" + "\n" + DateTime.Now.ToString("M") + getSuffix(DateTime.Now.ToString("d")) + " " + DateTime.Now.ToString("t") + "\n\n" + "Time Left:\n" + time.ToString("c");
+                NextEventBlock.Text = eventName + "\nDue:" + "\n" + month + day + getSuffix(day) + " " + hour + " " + meridian + "\n\n" + "Time Left:\n" + time.ToString("c");
                 if (time == TimeSpan.Zero)
                 {
                     countdown.Stop();
-                    //tasksOnTime--;
                     UpdateProductivity();
                 }
                 time = time.Add(TimeSpan.FromSeconds(-1)); //Countdown timer implementation -> https://stackoverflow.com/questions/16748371/how-to-make-a-wpf-countdown-timer
@@ -89,6 +91,7 @@ namespace Productive
         {
             EventsSubWindow events = new EventsSubWindow();
             events.Show();
+            this.Close();
         }
 
         private void ImportButton_Click(object sender, RoutedEventArgs e)

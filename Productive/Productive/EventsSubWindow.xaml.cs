@@ -45,8 +45,8 @@ namespace Productive
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
+            this.Close();
             addEvent.Show();
-            Close();
         }
 
         private void MenuItem_Click_1(object sender, RoutedEventArgs e)
@@ -61,8 +61,9 @@ namespace Productive
 
         private void MenuItem_Click_2(object sender, RoutedEventArgs e)
         {
-            this.Close();
             main.Show();
+            main.updateEvent();
+            this.Close();
         }
 
         private void MenuItem_Click_3(object sender, RoutedEventArgs e)

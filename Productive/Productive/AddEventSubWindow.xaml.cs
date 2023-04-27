@@ -27,6 +27,7 @@ namespace Productive
         private string Meridiem;
 
        public List<TextBox> eventList = new List<TextBox>();
+       MainWindow mainWindow = new MainWindow();
 
         public AddEventSubWindow()
         {
@@ -36,15 +37,14 @@ namespace Productive
         private void setEvent()
         {
             EventsSubWindow events = new EventsSubWindow();
-            MainWindow mainWindow= new MainWindow();
-
-            EventName = EventNameBar.Text;
-            Month = MonthBar.Text;
-            Day = Int32.Parse(DayBar.Text);
-            Hour = HourBar.Text;
-            Meridiem = MeridiemBar.Text;
-
             TextBox eventBox = new TextBox();
+
+            EventName = "My Event";
+            Month = "May";
+            Day = 4;
+            Hour = "12:00";
+            Meridiem = "P.M";
+
             eventBox.TextAlignment = TextAlignment.Center;
             eventBox.Text = "Event:" + "\n" + EventName + "\n" + Month + " " + Day + mainWindow.getSuffix(Day.ToString()) + "\n" + Hour + " " + Meridiem;
             eventBox.Width = 500;
@@ -117,6 +117,7 @@ namespace Productive
             else
             {
                 setEvent();
+                Close();
             }
 
         }
@@ -125,5 +126,6 @@ namespace Productive
         {
 
         }
+
     }
 }
